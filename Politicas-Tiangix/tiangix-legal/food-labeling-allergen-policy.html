@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food, Labeling &amp; Allergen Policy — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<header class="tx-header">
+  <a class="tx-logo" href="index.html">Tiangix <span class="tx-logo-sub">by Latin Ventures LLC</span></a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')"><span class="flag">🇲🇽</span> ES</button>
+    <div class="divider"></div>
+    <button id="btn-en" onclick="setLang('en')"><span class="flag">🇺🇸</span> EN</button>
+  </div>
+</header>
+<div class="tx-container"><div class="tx-card">
+
+<!-- ══════════ ESPAÑOL ══════════ -->
+<div data-lang="es" class="active">
+  <h1 class="tx-policy-title">Política de Alimentos, Etiquetado y Alérgenos</h1>
+  <p class="tx-policy-meta">Última actualización: julio 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">Esta política aplica a todos los vendedores que comercializan productos alimenticios, suplementos, cosméticos o cualquier producto que entre en contacto con el cuerpo humano. El cumplimiento de esta política es obligatorio y su violación puede resultar en consecuencias legales para el vendedor.</div>
+
+  <h2 class="tx-section">1. Cumplimiento con FSMA (Food Safety Modernization Act)</h2>
+  <p>La Ley de Modernización de la Inocuidad Alimentaria (FSMA, Pub. L. 111-353) es la reforma más importante de la ley federal de alimentos de USA en décadas. Los vendedores de alimentos en Tiangix deben conocer y cumplir con las reglas aplicables a su tipo de operación:</p>
+  <ul>
+    <li><strong>Preventive Controls for Human Food (21 CFR Part 117):</strong> aplica a instalaciones de alimentos que no son muy pequeñas o que superan $1M en ventas anuales de alimentos. Requiere un plan de inocuidad alimentaria escrito.</li>
+    <li><strong>Produce Safety Rule (21 CFR Part 112):</strong> aplica a granjas que cultivan frutas y vegetales frescos. Establece estándares de agua, higiene, enmiendas del suelo y rastreo.</li>
+    <li><strong>Exempciones:</strong> vendedores cottage food con ingresos anuales inferiores a $250,000 USD y ventas directas al consumidor pueden estar exentos de ciertos requisitos FSMA. Verificar con las autoridades de su estado.</li>
+  </ul>
+  <div class="tx-warn">Tiangix no puede determinar si tu operación está exenta de FSMA. Consulta a un especialista en cumplimiento regulatorio alimentario o contacta a la FDA directamente para determinar tus obligaciones específicas.</div>
+
+  <h2 class="tx-section">2. Requisitos de etiquetado FDA para alimentos (21 CFR Part 101)</h2>
+  <p>Todo producto alimenticio vendido en Tiangix con modelo SHIPPING debe incluir en su etiqueta física (del empaque) la siguiente información obligatoria:</p>
+  <table class="tx-table">
+    <thead><tr><th>Elemento de etiqueta</th><th>Requerimiento</th></tr></thead>
+    <tbody>
+      <tr><td>Nombre común del producto (Statement of Identity)</td><td>Obligatorio en la Panel Principal de la etiqueta, en español y/o inglés</td></tr>
+      <tr><td>Lista de ingredientes</td><td>En orden descendente por peso; incluir todos los aditivos y saborizantes</td></tr>
+      <tr><td>Información nutricional (Nutrition Facts)</td><td>Obligatorio para la mayoría de los productos empacados; formato FDA actualizado 2020</td></tr>
+      <tr><td>Nombre y dirección del fabricante, empacador o distribuidor</td><td>Obligatorio; puede ser nombre y ciudad/estado si la dirección completa está en directorio público</td></tr>
+      <tr><td>Cantidad neta del contenido (Net Quantity of Contents)</td><td>En unidades métricas e imperiales; en el tercio inferior del Panel Principal</td></tr>
+      <tr><td>Fecha de vencimiento o fecha de "Best By"</td><td>Obligatorio para productos con vida útil limitada</td></tr>
+      <tr><td>País de origen (si aplica)</td><td>Requerido para productos importados bajo COOL (Country of Origin Labeling)</td></tr>
+      <tr><td>Declaración de alérgenos</td><td>Ver Sección 3 — obligatorio bajo FALCPA y FASTER Act</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">3. Los 9 Alérgenos Mayores según la FDA</h2>
+  <p>Bajo la <strong>Food Allergen Labeling and Consumer Protection Act (FALCPA, 2004)</strong> y la <strong>FASTER Act (2021)</strong>, que añadió el sésamo como el noveno alérgeno mayor efectivo desde enero 2023, los siguientes alérgenos deben declararse en la etiqueta de todo alimento empacado:</p>
+  <div class="tx-danger">
+    <strong>Los 9 alérgenos mayores de declaración obligatoria (efectivo enero 2023):</strong>
+    <ul>
+      <li><span class="tx-badge tx-badge--red">1</span> <strong>Leche</strong> (milk) — incluye lactosa, caseína, whey</li>
+      <li><span class="tx-badge tx-badge--red">2</span> <strong>Huevos</strong> (eggs) — albúmina, lecitina de huevo</li>
+      <li><span class="tx-badge tx-badge--red">3</span> <strong>Pescado</strong> (fish) — debe especificarse la especie (ej. "atún", "tilapia", "salmón")</li>
+      <li><span class="tx-badge tx-badge--red">4</span> <strong>Mariscos de concha</strong> (shellfish) — camarón, cangrejo, langosta; debe especificarse el tipo</li>
+      <li><span class="tx-badge tx-badge--red">5</span> <strong>Nueces de árbol</strong> (tree nuts) — almendras, nueces de Castilla, anacardos, pistaches, etc.; especificar tipo</li>
+      <li><span class="tx-badge tx-badge--red">6</span> <strong>Maní / cacahuate</strong> (peanuts) — incluyendo aceite de maní y mantequilla de maní</li>
+      <li><span class="tx-badge tx-badge--red">7</span> <strong>Trigo</strong> (wheat) — incluye harina de trigo, gluten de trigo, espelta, semolina</li>
+      <li><span class="tx-badge tx-badge--red">8</span> <strong>Soja / soya</strong> (soybeans) — incluye proteína de soya, lecitina de soya, tofu, miso</li>
+      <li><span class="tx-badge tx-badge--red">9</span> <strong>Sésamo / ajonjolí</strong> (sesame) — añadido por FASTER Act, obligatorio desde enero 1, 2023</li>
+    </ul>
+  </div>
+  <p>La declaración de alérgenos puede hacerse de dos formas aceptadas por FDA:</p>
+  <ul>
+    <li><strong>Forma 1 — en la lista de ingredientes:</strong> indicar el nombre del alérgeno entre paréntesis después del nombre del ingrediente. Ejemplo: "harina (trigo)", "mantequilla (leche)"</li>
+    <li><strong>Forma 2 — declaración "Contiene":</strong> añadir al final de la lista de ingredientes: "Contiene: Trigo, Leche, Sésamo" (en mayúsculas o negrita)</li>
+  </ul>
+  <div class="tx-warn">Las declaraciones "Puede contener trazas de..." o "Procesado en una instalación que también procesa..." son <strong>voluntarias</strong> y no reemplazan la declaración obligatoria de alérgenos presentes. Sin embargo, se recomienda incluirlas para informar a consumidores con alergias severas.</div>
+
+  <h2 class="tx-section">4. Etiquetado bilingüe ES/EN</h2>
+  <p>Tiangix es un marketplace bilingüe dirigido a la comunidad latina en USA. Si bien la FDA no exige etiquetado en español para el mercado general, Tiangix <strong>recomienda fuertemente</strong> el etiquetado bilingüe (español e inglés) en los productos publicados. Para los listings en la plataforma:</p>
+  <ul>
+    <li>El campo "descripción" del listing debe incluir la lista de ingredientes y alérgenos en inglés (requerido) y en español (recomendado).</li>
+    <li>Los alérgenos deben declararse en inglés tal como los define la FDA, con la traducción al español si se desea.</li>
+    <li>Las fechas de vencimiento deben estar en formato MM/DD/AAAA o con el mes escrito (ej. "Best By Jul 2027").</li>
+  </ul>
+
+  <h2 class="tx-section">5. Leyes de Cottage Food por estado</h2>
+  <p>El "cottage food" (alimentos elaborados en cocinas domésticas) está regulado a nivel estatal. Las reglas varían considerablemente. Los vendedores de cottage food en Tiangix deben cumplir con la ley de su estado de origen:</p>
+  <table class="tx-table">
+    <thead><tr><th>Aspecto</th><th>Variación típica por estado</th></tr></thead>
+    <tbody>
+      <tr><td>Umbral de ingreso anual</td><td>Entre $5,000 (estados restrictivos) y $75,000+ (estados permisivos). California: $75,000 (Class B). Texas: $50,000. Oklahoma: sin límite de ingreso para Tier 1.</td></tr>
+      <tr><td>Productos permitidos</td><td>Panadería seca (galletas, panes, brownies) — casi universal. Productos con crema, merengue o rellenos de lácteos — varía por estado.</td></tr>
+      <tr><td>Canales de venta permitidos</td><td>Venta directa al consumidor es casi universal. Venta en línea: permitida en muchos estados con entrega directa, pero envío interestatal puede estar restringido.</td></tr>
+      <tr><td>Etiquetado requerido</td><td>Nombre del producto, ingredientes, nombre y dirección del productor, leyenda requerida por estado (ej. "Made in a home kitchen not inspected by the [State] Department of Agriculture")</td></tr>
+      <tr><td>Certificación requerida</td><td>Algunos estados requieren certificado de manipulador de alimentos (food handler certificate). Oklahoma requiere registro en el Oklahoma Department of Agriculture.</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-warn">El vendedor es el único responsable de verificar y cumplir con la cottage food law de su estado. Tiangix no valida automáticamente el cumplimiento estatal. La venta interestatal de cottage food puede estar prohibida según el estado de origen.</div>
+
+  <h2 class="tx-section">6. Lácteos artesanales — etiquetado FDA</h2>
+  <p>Los quesos, cremas, yogures y otros lácteos artesanales están sujetos a regulación especial:</p>
+  <ul>
+    <li>La etiqueta debe declarar si el producto fue elaborado con <strong>leche pasteurizada o sin pasteurizar (raw milk)</strong>.</li>
+    <li>Productos con leche sin pasteurizar deben incluir la leyenda: <em>"WARNING: This product is made from raw (unpasteurized) milk. It may contain harmful bacteria. Pregnant women, children, the elderly, and persons with weakened immune systems are at particular risk from Listeria monocytogenes."</em></li>
+    <li>La venta interestatal de leche sin pasteurizar y quesos frescos elaborados con ella (maduración &lt; 60 días) está <strong>prohibida por la FDA</strong> (21 CFR § 1240.61).</li>
+    <li>Quesos curados con maduración ≥ 60 días elaborados con raw milk pueden venderse interestatalmente, pero solo si hay un inspector USDA o equivalente estatal que certifique el proceso.</li>
+  </ul>
+
+  <h2 class="tx-section">7. Carnes crudas — USDA inspection mark</h2>
+  <p>Para el envío interestatal de carnes crudas, embutidos, y productos cárnicos procesados se requiere:</p>
+  <ul>
+    <li>Sello de inspección USDA FSIS (círculo con número de establecimiento y "USDA EST. XXXX").</li>
+    <li>El establecimiento donde se procesa la carne debe estar <strong>registrado y aprobado por USDA FSIS</strong> (9 CFR Part 301 et seq.).</li>
+    <li>Las carnes de caza silvestre (venado, jabali, etc.) no están bajo jurisdicción USDA para envío interestatal a menos que sean procesadas en un establecimiento USDA.</li>
+    <li>Carnes sin sello USDA solo pueden venderse <strong>intra-estatalmente</strong> bajo SAME_DAY_LOCAL, y solo si la ley del estado lo permite.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Panadería con relleno y productos SAME_DAY_LOCAL</h2>
+  <p>Los productos de panadería que contienen rellenos perecederos (natilla, crema pastelera, crema de queso, frutas frescas) están restringidos en Tiangix:</p>
+  <div class="tx-danger">
+    <ul>
+      <li>Panadería con relleno de crema, natilla o queso fresco: <strong>solo disponible via SAME_DAY_LOCAL</strong>. Prohibido envío por courrier (SHIPPING model).</li>
+      <li>Temperatura de almacenamiento requerida: ≤ 40°F (4°C) en todo momento hasta entrega.</li>
+      <li>Tiempo máximo de tránsito: 2 horas desde el recojo del repartidor.</li>
+      <li>El vendedor debe indicar claramente en el listing que el producto requiere refrigeración y tiene vida útil de X días a partir de la fecha de elaboración.</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">9. Restricciones específicas V1/V2</h2>
+  <div class="tx-danger">
+    <ul>
+      <li><strong>Tamales sellados al vacío listos para comer:</strong> PROHIBIDO en V1/V2. Los tamales congelados sin cocer o tamales frescos para cocinar en casa pueden ser analizados para V3.</li>
+      <li><strong>Comida preparada lista para consumo inmediato:</strong> absolutamente prohibida (ver Política de Productos Prohibidos).</li>
+      <li><strong>Comida preparada en restaurante o cocina comercial para entrega individual:</strong> prohibida. Tiangix no es una plataforma de delivery de restaurantes.</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">10. Notificación obligatoria de recalls</h2>
+  <p>Si un vendedor de Tiangix recibe una notificación de recall de un producto que tiene activo en la plataforma (ya sea de FDA, USDA/FSIS o CPSC), debe:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>Suspender inmediatamente el listing del producto afectado (o contactar a Tiangix si no puede hacerlo).</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>Notificar a Tiangix por correo a <a href="mailto:compliance@tiangix.com">compliance@tiangix.com</a> con los detalles del recall (número de recall, productos afectados, lote/fecha) dentro de las <strong>24 horas</strong> siguientes a recibir la notificación.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>Tiangix identificará todos los compradores que hayan adquirido el producto afectado y les enviará una notificación de recall con instrucciones de seguridad.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>El vendedor debe ofrecer reembolso completo o reemplazo del producto a todos los compradores afectados, independientemente de la política de devoluciones estándar.</div>
+  </div>
+  <div class="tx-danger">El incumplimiento de la notificación obligatoria de recalls puede resultar en responsabilidad legal del vendedor y en la suspensión permanente de la cuenta en Tiangix.</div>
+
+  <h2 class="tx-section">11. Responsabilidades del vendedor vs. responsabilidad de Tiangix</h2>
+  <table class="tx-table">
+    <thead><tr><th>Responsabilidad</th><th>Vendedor</th><th>Tiangix</th></tr></thead>
+    <tbody>
+      <tr><td>Exactitud del etiquetado físico del producto</td><td>100% del vendedor</td><td>No verifica etiquetado físico</td></tr>
+      <tr><td>Declaración de alérgenos en el listing</td><td>Obligación del vendedor</td><td>Revisa listings de categorías reguladas antes de publicar</td></tr>
+      <tr><td>Cumplimiento FSMA, FDA, USDA</td><td>100% del vendedor</td><td>Exige documentación en onboarding, no audita procesos</td></tr>
+      <tr><td>Notificación de recalls a compradores</td><td>Vendedor notifica a Tiangix; Tiangix notifica a compradores</td><td>Gestiona la comunicación con compradores afectados</td></tr>
+      <tr><td>Seguridad alimentaria del producto</td><td>100% del vendedor</td><td>No es fabricante ni procesador; no tiene responsabilidad de producto</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-note">Tiangix opera como marketplace facilitador, no como fabricante, importador ni distribuidor de los productos. La responsabilidad de producto (product liability) recae exclusivamente en el vendedor. Tiangix recomienda a todos los vendedores de alimentos contar con un seguro de responsabilidad civil de producto.</div>
+</div>
+
+<!-- ══════════ ENGLISH ══════════ -->
+<div data-lang="en">
+  <h1 class="tx-policy-title">Food, Labeling &amp; Allergen Policy</h1>
+  <p class="tx-policy-meta">Last updated: July 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">This policy applies to all sellers who sell food products, supplements, cosmetics, or any product that comes into contact with the human body. Compliance with this policy is mandatory, and violations may result in legal consequences for the seller.</div>
+
+  <h2 class="tx-section">1. FSMA Compliance (Food Safety Modernization Act)</h2>
+  <p>The Food Safety Modernization Act (FSMA, Pub. L. 111-353) is the most significant reform of US federal food law in decades. Food sellers on Tiangix must know and comply with the rules applicable to their type of operation:</p>
+  <ul>
+    <li><strong>Preventive Controls for Human Food (21 CFR Part 117):</strong> applies to food facilities that are not very small or exceed $1M in annual food sales. Requires a written food safety plan.</li>
+    <li><strong>Produce Safety Rule (21 CFR Part 112):</strong> applies to farms growing fresh fruits and vegetables. Establishes water, hygiene, soil amendments, and traceability standards.</li>
+    <li><strong>Exemptions:</strong> cottage food sellers with annual revenues below $250,000 USD and direct-to-consumer sales may be exempt from certain FSMA requirements. Verify with your state authorities.</li>
+  </ul>
+  <div class="tx-warn">Tiangix cannot determine if your operation is FSMA-exempt. Consult a food regulatory compliance specialist or contact the FDA directly to determine your specific obligations.</div>
+
+  <h2 class="tx-section">2. FDA Food Labeling Requirements (21 CFR Part 101)</h2>
+  <p>All food products sold on Tiangix via the SHIPPING model must include the following mandatory information on their physical label (packaging):</p>
+  <table class="tx-table">
+    <thead><tr><th>Label Element</th><th>Requirement</th></tr></thead>
+    <tbody>
+      <tr><td>Product common name (Statement of Identity)</td><td>Required on the Principal Display Panel, in English and/or Spanish</td></tr>
+      <tr><td>Ingredient list</td><td>In descending order by weight; include all additives and flavorings</td></tr>
+      <tr><td>Nutrition Facts information</td><td>Required for most packaged products; 2020 FDA updated format</td></tr>
+      <tr><td>Name and address of manufacturer, packer, or distributor</td><td>Required; may be name and city/state if full address is in public directory</td></tr>
+      <tr><td>Net quantity of contents</td><td>In metric and imperial units; in lower third of Principal Display Panel</td></tr>
+      <tr><td>Expiration date or "Best By" date</td><td>Required for products with limited shelf life</td></tr>
+      <tr><td>Country of origin (if applicable)</td><td>Required for imported products under COOL (Country of Origin Labeling)</td></tr>
+      <tr><td>Allergen declaration</td><td>See Section 3 — required under FALCPA and FASTER Act</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">3. The 9 Major Allergens per FDA</h2>
+  <p>Under the <strong>Food Allergen Labeling and Consumer Protection Act (FALCPA, 2004)</strong> and the <strong>FASTER Act (2021)</strong>, which added sesame as the ninth major allergen effective January 2023, the following allergens must be declared on the label of all packaged foods:</p>
+  <div class="tx-danger">
+    <strong>The 9 major allergens requiring mandatory declaration (effective January 2023):</strong>
+    <ul>
+      <li><span class="tx-badge tx-badge--red">1</span> <strong>Milk</strong> — includes lactose, casein, whey</li>
+      <li><span class="tx-badge tx-badge--red">2</span> <strong>Eggs</strong> — albumin, egg lecithin</li>
+      <li><span class="tx-badge tx-badge--red">3</span> <strong>Fish</strong> — species must be specified (e.g., "tuna", "tilapia", "salmon")</li>
+      <li><span class="tx-badge tx-badge--red">4</span> <strong>Shellfish</strong> — shrimp, crab, lobster; type must be specified</li>
+      <li><span class="tx-badge tx-badge--red">5</span> <strong>Tree nuts</strong> — almonds, walnuts, cashews, pistachios, etc.; type must be specified</li>
+      <li><span class="tx-badge tx-badge--red">6</span> <strong>Peanuts</strong> — including peanut oil and peanut butter</li>
+      <li><span class="tx-badge tx-badge--red">7</span> <strong>Wheat</strong> — includes wheat flour, wheat gluten, spelt, semolina</li>
+      <li><span class="tx-badge tx-badge--red">8</span> <strong>Soybeans</strong> — includes soy protein, soy lecithin, tofu, miso</li>
+      <li><span class="tx-badge tx-badge--red">9</span> <strong>Sesame</strong> — added by FASTER Act, mandatory since January 1, 2023</li>
+    </ul>
+  </div>
+  <p>Allergen declaration may be made in two FDA-accepted forms:</p>
+  <ul>
+    <li><strong>Form 1 — in the ingredient list:</strong> state the allergen name in parentheses after the ingredient name. Example: "flour (wheat)", "butter (milk)"</li>
+    <li><strong>Form 2 — "Contains" statement:</strong> add at the end of the ingredient list: "Contains: Wheat, Milk, Sesame" (in capitals or bold)</li>
+  </ul>
+  <div class="tx-warn">"May contain traces of..." or "Processed in a facility that also processes..." declarations are <strong>voluntary</strong> and do not replace the mandatory declaration of present allergens. However, it is recommended to include them to inform consumers with severe allergies.</div>
+
+  <h2 class="tx-section">4. Bilingual ES/EN Labeling</h2>
+  <p>Tiangix is a bilingual marketplace aimed at the Latino community in the USA. While the FDA does not require Spanish labeling for the general market, Tiangix <strong>strongly recommends</strong> bilingual labeling (Spanish and English) on published products. For platform listings:</p>
+  <ul>
+    <li>The listing "description" field must include the ingredient list and allergens in English (required) and in Spanish (recommended).</li>
+    <li>Allergens must be declared in English as defined by the FDA, with Spanish translation if desired.</li>
+    <li>Expiration dates must be in MM/DD/YYYY format or with the month written (e.g., "Best By Jul 2027").</li>
+  </ul>
+
+  <h2 class="tx-section">5. State Cottage Food Laws</h2>
+  <p>Cottage food (foods made in home kitchens) is regulated at the state level. Rules vary considerably. Cottage food sellers on Tiangix must comply with the law of their state of origin:</p>
+  <table class="tx-table">
+    <thead><tr><th>Aspect</th><th>Typical Variation by State</th></tr></thead>
+    <tbody>
+      <tr><td>Annual income threshold</td><td>Between $5,000 (restrictive states) and $75,000+ (permissive states). California: $75,000 (Class B). Texas: $50,000. Oklahoma: no income cap for Tier 1.</td></tr>
+      <tr><td>Allowed products</td><td>Dry baked goods (cookies, breads, brownies) — nearly universal. Cream, meringue, or dairy-filled products — varies by state.</td></tr>
+      <tr><td>Permitted sales channels</td><td>Direct-to-consumer sales are nearly universal. Online sales: allowed in many states with direct delivery, but interstate shipping may be restricted.</td></tr>
+      <tr><td>Required labeling</td><td>Product name, ingredients, producer name and address, required state notice (e.g., "Made in a home kitchen not inspected by the [State] Department of Agriculture")</td></tr>
+      <tr><td>Required certification</td><td>Some states require a food handler certificate. Oklahoma requires registration with the Oklahoma Department of Agriculture.</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-warn">The seller is solely responsible for verifying and complying with their state's cottage food law. Tiangix does not automatically validate state compliance. Interstate sale of cottage food may be prohibited depending on the state of origin.</div>
+
+  <h2 class="tx-section">6. Artisan Dairy — FDA Labeling</h2>
+  <p>Artisan cheeses, creams, yogurts, and other dairy products are subject to special regulation:</p>
+  <ul>
+    <li>The label must declare whether the product was made with <strong>pasteurized or unpasteurized (raw milk)</strong>.</li>
+    <li>Products with unpasteurized milk must include the notice: <em>"WARNING: This product is made from raw (unpasteurized) milk. It may contain harmful bacteria. Pregnant women, children, the elderly, and persons with weakened immune systems are at particular risk from Listeria monocytogenes."</em></li>
+    <li>Interstate sale of unpasteurized milk and fresh cheeses made with it (aging &lt; 60 days) is <strong>prohibited by the FDA</strong> (21 CFR § 1240.61).</li>
+    <li>Aged cheeses with aging ≥ 60 days made with raw milk may be sold interstate, but only if a USDA inspector or state equivalent certifies the process.</li>
+  </ul>
+
+  <h2 class="tx-section">7. Raw Meats — USDA Inspection Mark</h2>
+  <p>For interstate shipping of raw meats, sausages, and processed meat products, the following is required:</p>
+  <ul>
+    <li>USDA FSIS inspection seal (circle with establishment number and "USDA EST. XXXX").</li>
+    <li>The establishment where meat is processed must be <strong>registered and approved by USDA FSIS</strong> (9 CFR Part 301 et seq.).</li>
+    <li>Wild game meats (venison, wild boar, etc.) are not under USDA jurisdiction for interstate shipping unless processed in a USDA-approved establishment.</li>
+    <li>Meats without USDA seal may only be sold <strong>intra-state</strong> under SAME_DAY_LOCAL, and only if state law permits.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Filled Pastries and SAME_DAY_LOCAL Products</h2>
+  <p>Bakery products containing perishable fillings (custard, pastry cream, cream cheese, fresh fruits) are restricted on Tiangix:</p>
+  <div class="tx-danger">
+    <ul>
+      <li>Pastries with cream, custard, or fresh cheese filling: <strong>only available via SAME_DAY_LOCAL</strong>. Prohibited for courier shipping (SHIPPING model).</li>
+      <li>Required storage temperature: ≤ 40°F (4°C) at all times until delivery.</li>
+      <li>Maximum transit time: 2 hours from courier pickup.</li>
+      <li>Seller must clearly indicate in the listing that the product requires refrigeration and has a shelf life of X days from the date of preparation.</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">9. V1/V2 Specific Restrictions</h2>
+  <div class="tx-danger">
+    <ul>
+      <li><strong>Vacuum-sealed ready-to-eat tamales:</strong> PROHIBITED in V1/V2. Frozen uncooked tamales or fresh tamales to be cooked at home may be analyzed for V3.</li>
+      <li><strong>Prepared food ready for immediate consumption:</strong> absolutely prohibited (see Prohibited Products Policy).</li>
+      <li><strong>Food prepared in a restaurant or commercial kitchen for individual delivery:</strong> prohibited. Tiangix is not a restaurant delivery platform.</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">10. Mandatory Recall Notification</h2>
+  <p>If a Tiangix seller receives a recall notification for a product they have active on the platform (from FDA, USDA/FSIS, or CPSC), they must:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>Immediately suspend the listing for the affected product (or contact Tiangix if unable to do so).</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>Notify Tiangix by email at <a href="mailto:compliance@tiangix.com">compliance@tiangix.com</a> with recall details (recall number, affected products, lot/date) within <strong>24 hours</strong> of receiving the notification.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>Tiangix will identify all buyers who purchased the affected product and send them a recall notification with safety instructions.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>Seller must offer a full refund or product replacement to all affected buyers, regardless of the standard return policy.</div>
+  </div>
+  <div class="tx-danger">Failure to comply with mandatory recall notification may result in seller legal liability and permanent account suspension on Tiangix.</div>
+
+  <h2 class="tx-section">11. Seller Responsibilities vs. Tiangix Liability</h2>
+  <table class="tx-table">
+    <thead><tr><th>Responsibility</th><th>Seller</th><th>Tiangix</th></tr></thead>
+    <tbody>
+      <tr><td>Accuracy of physical product labeling</td><td>100% seller responsibility</td><td>Does not verify physical labeling</td></tr>
+      <tr><td>Allergen declaration in the listing</td><td>Seller obligation</td><td>Reviews regulated category listings before publication</td></tr>
+      <tr><td>FSMA, FDA, USDA compliance</td><td>100% seller responsibility</td><td>Requires documentation at onboarding, does not audit processes</td></tr>
+      <tr><td>Recall notification to buyers</td><td>Seller notifies Tiangix; Tiangix notifies buyers</td><td>Manages communication with affected buyers</td></tr>
+      <tr><td>Food safety of the product</td><td>100% seller responsibility</td><td>Not a manufacturer or processor; no product liability</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-note">Tiangix operates as a marketplace facilitator, not as a manufacturer, importer, or distributor of products. Product liability rests exclusively with the seller. Tiangix recommends all food sellers carry product liability insurance.</div>
+</div>
+
+</div>
+<footer class="tx-footer">© 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved · <a href="https://www.tiangix.com">www.tiangix.com</a> · <a href="index.html">← Legal Center</a></footer>
+</div>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('active'));document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.add('active'));document.getElementById('btn-es').classList.toggle('active',l==='es');document.getElementById('btn-en').classList.toggle('active',l==='en');document.documentElement.lang=l;}
+</script>
+</body></html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing &amp; Compliance Policy — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<header class="tx-header">
+  <a class="tx-logo" href="index.html">Tiangix <span class="tx-logo-sub">by Latin Ventures LLC</span></a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')"><span class="flag">🇲🇽</span> ES</button>
+    <div class="divider"></div>
+    <button id="btn-en" onclick="setLang('en')"><span class="flag">🇺🇸</span> EN</button>
+  </div>
+</header>
+<div class="tx-container"><div class="tx-card">
+
+<!-- ══════════ ESPAÑOL ══════════ -->
+<div data-lang="es" class="active">
+  <h1 class="tx-policy-title">Política de Publicación de Productos y Cumplimiento</h1>
+  <p class="tx-policy-meta">Última actualización: julio 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">Esta política aplica a todos los vendedores activos en Tiangix, sin excepción de tier o tipo de seller policy. El incumplimiento puede resultar en la suspensión del listing o de la cuenta completa.</div>
+
+  <h2 class="tx-section">1. Campos obligatorios por listing</h2>
+  <p>Todo producto publicado en Tiangix debe incluir los siguientes campos completos y verídicos. Listings incompletos serán marcados como <strong>Draft</strong> y no serán visibles para compradores hasta su corrección:</p>
+  <table class="tx-table">
+    <thead><tr><th>Campo</th><th>Requerimiento</th><th>Notas</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Título del producto</strong></td><td>Obligatorio</td><td>Máximo 120 caracteres, idioma ES o EN, sin palabras prohibidas</td></tr>
+      <tr><td><strong>Descripción</strong></td><td>Obligatorio</td><td>Mínimo 80 caracteres, sin afirmaciones de salud no aprobadas por FDA</td></tr>
+      <tr><td><strong>Imágenes</strong></td><td>Obligatorio</td><td>Mínimo 1 imagen de 800×800 px; máximo 8; fondo blanco o neutro recomendado</td></tr>
+      <tr><td><strong>Precio</strong></td><td>Obligatorio</td><td>En USD, con hasta dos decimales; precio mínimo $0.50</td></tr>
+      <tr><td><strong>SKU / Identificador</strong></td><td>Recomendado</td><td>Alfanumérico, único por vendedor</td></tr>
+      <tr><td><strong>Stock / Inventario</strong></td><td>Obligatorio</td><td>Número entero ≥ 0; si = 0, listing se suspende automáticamente</td></tr>
+      <tr><td><strong>Peso del producto</strong></td><td>Obligatorio para envío</td><td>En onzas (oz) o libras (lbs); requerido para cálculo de flete EasyPost</td></tr>
+      <tr><td><strong>Dimensiones del empaque</strong></td><td>Recomendado</td><td>Largo × Ancho × Alto en pulgadas</td></tr>
+      <tr><td><strong>Categoría principal</strong></td><td>Obligatorio</td><td>Selección del catálogo Tiangix (21 categorías base)</td></tr>
+      <tr><td><strong>Subcategoría</strong></td><td>Obligatorio</td><td>Nivel 2 del catálogo de categorías</td></tr>
+      <tr><td><strong>Modelo de envío</strong></td><td>Obligatorio</td><td>SHIPPING o SAME_DAY_LOCAL según aplique</td></tr>
+      <tr><td><strong>is_seasonal</strong></td><td>Obligatorio si aplica</td><td>Flag booleano; activa/desactiva el listing en fechas programadas</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">2. Atributo is_seasonal</h2>
+  <p>Los vendedores pueden marcar productos como <strong>estacionales</strong> mediante el atributo <code>is_seasonal = true</code>. Al activarlo, deben configurar:</p>
+  <ul>
+    <li><strong>available_from:</strong> fecha de inicio de disponibilidad (YYYY-MM-DD)</li>
+    <li><strong>available_until:</strong> fecha de fin de disponibilidad (YYYY-MM-DD)</li>
+  </ul>
+  <div class="tx-note">Tiangix desactiva automáticamente los listings estacionales fuera del rango de fechas. El vendedor es responsable de revisar sus listings estacionales antes de cada temporada (Navidad, Día de Muertos, etc.).</div>
+
+  <h2 class="tx-section">3. Requisitos de etiquetado FDA/USDA por categoría</h2>
+  <p>Los productos de alimentación y salud requieren información adicional en el listing según la normativa federal aplicable:</p>
+  <table class="tx-table">
+    <thead><tr><th>Categoría</th><th>Etiquetado requerido en listing</th><th>Marco legal</th></tr></thead>
+    <tbody>
+      <tr><td>Abarrotes secos / Snacks empacados</td><td>Lista de ingredientes, información nutricional, peso neto, fecha de vencimiento o "Best By"</td><td>FDA 21 CFR Part 101</td></tr>
+      <tr><td>Cottage Food (panadería casera)</td><td>Nombre del producto, ingredientes, peso, nombre y contacto del productor, leyenda estatal requerida</td><td>Cottage Food Law por estado</td></tr>
+      <tr><td>Carnes crudas / Frescos</td><td>Sello de inspección USDA, temperatura de refrigeración/congelación recomendada, fecha de empaque</td><td>USDA FSIS 9 CFR</td></tr>
+      <tr><td>Lácteos artesanales</td><td>Lista de ingredientes, declaración de pasteurización o leyenda "raw milk" si aplica, estado de origen</td><td>FDA 21 CFR Part 131</td></tr>
+      <tr><td>OTC / Medicamentos sin receta</td><td>Número NDC (National Drug Code), Drug Facts label, indicaciones y contraindicaciones</td><td>FDA 21 CFR Part 201</td></tr>
+      <tr><td>Cosméticos</td><td>Lista de ingredientes INCI, nombre del fabricante o distribuidor responsable, país de origen</td><td>FDA MoCRA (21 U.S.C. § 364)</td></tr>
+      <tr><td>Productos bebé (BABY)</td><td>Rango de edad, advertencias de seguridad CPSC, declaración de cumplimiento con FHSA</td><td>CPSC 16 CFR</td></tr>
+      <tr><td>Suplementos alimenticios</td><td>Supplement Facts panel, leyenda disclaimer FDA ("This statement has not been evaluated by the FDA...")</td><td>DSHEA / FDA 21 CFR Part 101.36</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-warn">El vendedor es el único responsable de la exactitud del etiquetado. Tiangix puede auditar listings en cualquier momento y solicitar documentación de respaldo. Información de etiquetado falsa o incompleta constituye una violación grave de estos términos.</div>
+
+  <h2 class="tx-section">4. Palabras clave y frases prohibidas en títulos y descripciones</h2>
+  <p>Los siguientes términos están estrictamente prohibidos en títulos, descripciones, etiquetas y cualquier campo de texto de un listing en Tiangix:</p>
+  <div class="tx-danger">
+    <strong>Comida preparada lista para comer / Ready-to-eat food:</strong>
+    <ul>
+      <li>"Listo para comer", "ready to eat", "ready-to-eat", "para llevar"</li>
+      <li>"Platillo", "guiso", "comida del día", "orden de...", "porción de..."</li>
+      <li>"Taco preparado", "taco listo", "tamales listos", "enchiladas listas"</li>
+      <li>"Comida caliente", "hot food", "prepared meal", "cooked meal"</li>
+      <li>"Restaurante", "menú del día", "especial del día", "antojitos"</li>
+    </ul>
+    <strong>Afirmaciones de salud no autorizadas por FDA:</strong>
+    <ul>
+      <li>"Cura el cáncer", "trata la diabetes", "elimina el COVID"</li>
+      <li>"Garantizado para bajar de peso", "quema grasa 100%"</li>
+      <li>Cualquier afirmación de enfermedad específica sin aprobación FDA/FTC</li>
+    </ul>
+    <strong>Otros términos prohibidos:</strong>
+    <ul>
+      <li>"Alcohol", "cerveza", "vino", "mezcal", "tequila" (productos alcohólicos)</li>
+      <li>"Tabaco", "cigarro", "vape", "nicotina"</li>
+      <li>Marcas registradas de terceros sin autorización escrita</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">5. Requisitos de imágenes</h2>
+  <p>Las imágenes de los productos deben cumplir con los siguientes estándares:</p>
+  <ul>
+    <li>Resolución mínima de 800×800 píxeles (recomendado 1200×1200)</li>
+    <li>El producto debe ocupar al menos el 85% del área de la imagen principal</li>
+    <li>Sin marcas de agua, texto superpuesto ni logos de otras plataformas</li>
+    <li>Sin imágenes de stock genéricas que no representen el producto real</li>
+    <li>Para alimentos: la imagen debe coincidir con el producto tal como es entregado (empacado, no preparado)</li>
+    <li>El vendedor debe ser titular o tener licencia de uso de todas las imágenes publicadas</li>
+  </ul>
+
+  <h2 class="tx-section">6. Compliance por tipo de Seller Policy</h2>
+  <table class="tx-table">
+    <thead><tr><th>Seller Policy</th><th>Productos típicos</th><th>Requisitos adicionales de listing</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">BASIC</span></td>
+        <td>Artesanías, ropa sin marca, decoración, papelería</td>
+        <td>Material del producto, país de fabricación o hecho en USA</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">FOOD</span></td>
+        <td>Abarrotes secos, enlatados, salsas empacadas, snacks</td>
+        <td>Ingredientes, alérgenos, fecha de vencimiento, peso neto</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">HANDMADE</span></td>
+        <td>Joyería artesanal, barro, textiles, velas, jabones</td>
+        <td>Materiales utilizados, proceso artesanal, lugar de fabricación</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--orange">PERISHABLE</span></td>
+        <td>Carnes crudas, lácteos frescos, panadería con relleno</td>
+        <td>Temperatura de almacenamiento, shelf life, instrucciones de manejo, modelo SAME_DAY_LOCAL obligatorio para frescos sin procesar</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--orange">REGULATED</span></td>
+        <td>OTC, cosméticos, suplementos, herbales</td>
+        <td>Número de registro FDA si aplica, Drug Facts o Supplement Facts, disclaimer legal</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--red">BABY</span></td>
+        <td>Ropa bebé, juguetes, artículos de higiene infantil</td>
+        <td>Rango de edad, materiales, certificación CPSC, advertencias de seguridad</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">7. Proceso de revisión de listings</h2>
+  <p>Tiangix emplea un proceso mixto de revisión automatizada y manual:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div><strong>Revisión automática al publicar:</strong> el sistema verifica campos obligatorios, palabras clave prohibidas, peso mínimo y formato de imágenes. Los listings que no pasen se marcan como <code>pending_review</code>.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div><strong>Revisión manual para categorías reguladas:</strong> listings con seller policy PERISHABLE, REGULATED o BABY son revisados por el equipo de compliance de Tiangix en un plazo de 1–3 días hábiles antes de publicarse.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div><strong>Notificación al vendedor:</strong> si el listing es rechazado, el vendedor recibe un correo con los motivos específicos y un plazo de 7 días para corregir y reenviar.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div><strong>Auditorías periódicas:</strong> Tiangix puede auditar listings activos en cualquier momento. Si se detecta incumplimiento posterior a la publicación, el listing puede ser suspendido sin previo aviso.</div>
+  </div>
+
+  <h2 class="tx-section">8. Suspensión de listings</h2>
+  <p>Un listing puede ser suspendido (<code>status: suspended</code>) en los siguientes supuestos:</p>
+  <ul>
+    <li>Stock en 0 (suspensión automática, se reactiva al actualizar inventario)</li>
+    <li>Incumplimiento de campos obligatorios detectado en auditoría</li>
+    <li>Uso de palabras clave prohibidas o afirmaciones ilegales</li>
+    <li>Reporte de producto prohibido validado por el equipo de Tiangix</li>
+    <li>Recall activo del producto emitido por FDA, USDA o CPSC</li>
+    <li>Denuncia de infracción de propiedad intelectual (DMCA o Trademark)</li>
+    <li>Imagen del producto que no corresponde al producto real</li>
+  </ul>
+  <div class="tx-warn">Tres suspensiones de listings dentro de un período de 90 días pueden resultar en la suspensión temporal o permanente de la cuenta del vendedor, a discreción de Tiangix.</div>
+
+  <h2 class="tx-section">9. Responsabilidad del vendedor sobre la exactitud del listado</h2>
+  <p>El vendedor declara y garantiza que toda la información publicada en sus listings es:</p>
+  <ul>
+    <li><strong>Verídica y actualizada:</strong> el precio, stock, descripción e imágenes reflejan el estado actual del producto.</li>
+    <li><strong>Conforme a la ley:</strong> el listing cumple con todas las regulaciones federales y estatales aplicables al tipo de producto.</li>
+    <li><strong>Sin infracción de IP:</strong> el vendedor tiene derechos sobre todas las imágenes, textos y marcas incluidas en el listing.</li>
+    <li><strong>No engañosa:</strong> ningún campo del listing contiene información falsa, exagerada o diseñada para inducir a error al comprador.</li>
+  </ul>
+  <p>Tiangix no asume responsabilidad por listings incorrectos, incompletos o fraudulentos. Cualquier reclamo de comprador derivado de información incorrecta en el listing es responsabilidad exclusiva del vendedor.</p>
+
+  <h2 class="tx-section">10. Contacto de compliance</h2>
+  <p>Para dudas sobre requisitos de publicación, documentación de categorías reguladas o disputas de listing, contacta al equipo de Tiangix:</p>
+  <ul>
+    <li>Email: <a href="mailto:compliance@tiangix.com">compliance@tiangix.com</a></li>
+    <li>Horario de soporte: lunes–sábado, 9:00 am – 6:00 pm Central Time</li>
+  </ul>
+</div>
+
+<!-- ══════════ ENGLISH ══════════ -->
+<div data-lang="en">
+  <h1 class="tx-policy-title">Product Listing &amp; Compliance Policy</h1>
+  <p class="tx-policy-meta">Last updated: July 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">This policy applies to all active sellers on Tiangix, regardless of subscription tier or seller policy type. Non-compliance may result in listing suspension or full account suspension.</div>
+
+  <h2 class="tx-section">1. Required Fields per Listing</h2>
+  <p>Every product listed on Tiangix must include the following complete and accurate fields. Incomplete listings will be marked as <strong>Draft</strong> and will not be visible to buyers until corrected:</p>
+  <table class="tx-table">
+    <thead><tr><th>Field</th><th>Requirement</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Product Title</strong></td><td>Required</td><td>Maximum 120 characters, ES or EN language, no prohibited words</td></tr>
+      <tr><td><strong>Description</strong></td><td>Required</td><td>Minimum 80 characters, no unapproved FDA health claims</td></tr>
+      <tr><td><strong>Images</strong></td><td>Required</td><td>Minimum 1 image at 800×800 px; maximum 8; white or neutral background recommended</td></tr>
+      <tr><td><strong>Price</strong></td><td>Required</td><td>In USD, up to two decimal places; minimum price $0.50</td></tr>
+      <tr><td><strong>SKU / Identifier</strong></td><td>Recommended</td><td>Alphanumeric, unique per seller</td></tr>
+      <tr><td><strong>Stock / Inventory</strong></td><td>Required</td><td>Integer ≥ 0; if = 0, listing is automatically suspended</td></tr>
+      <tr><td><strong>Product Weight</strong></td><td>Required for shipping</td><td>In ounces (oz) or pounds (lbs); required for EasyPost freight calculation</td></tr>
+      <tr><td><strong>Package Dimensions</strong></td><td>Recommended</td><td>Length × Width × Height in inches</td></tr>
+      <tr><td><strong>Main Category</strong></td><td>Required</td><td>Selection from Tiangix catalog (21 base categories)</td></tr>
+      <tr><td><strong>Subcategory</strong></td><td>Required</td><td>Level 2 of the category catalog</td></tr>
+      <tr><td><strong>Shipping Model</strong></td><td>Required</td><td>SHIPPING or SAME_DAY_LOCAL as applicable</td></tr>
+      <tr><td><strong>is_seasonal</strong></td><td>Required if applicable</td><td>Boolean flag; activates/deactivates listing on scheduled dates</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">2. is_seasonal Attribute</h2>
+  <p>Sellers may mark products as <strong>seasonal</strong> using the attribute <code>is_seasonal = true</code>. When enabled, they must configure:</p>
+  <ul>
+    <li><strong>available_from:</strong> availability start date (YYYY-MM-DD)</li>
+    <li><strong>available_until:</strong> availability end date (YYYY-MM-DD)</li>
+  </ul>
+  <div class="tx-note">Tiangix automatically deactivates seasonal listings outside the date range. Sellers are responsible for reviewing their seasonal listings before each season (Christmas, Día de Muertos, etc.).</div>
+
+  <h2 class="tx-section">3. FDA/USDA Labeling Requirements by Category</h2>
+  <p>Food and health products require additional information in the listing according to applicable federal regulations:</p>
+  <table class="tx-table">
+    <thead><tr><th>Category</th><th>Required listing labeling</th><th>Legal framework</th></tr></thead>
+    <tbody>
+      <tr><td>Dry Groceries / Packaged Snacks</td><td>Ingredient list, nutrition facts, net weight, expiration or "Best By" date</td><td>FDA 21 CFR Part 101</td></tr>
+      <tr><td>Cottage Food (home baking)</td><td>Product name, ingredients, weight, producer name and contact, required state notice</td><td>State Cottage Food Law</td></tr>
+      <tr><td>Raw Meats / Fresh Perishables</td><td>USDA inspection seal, recommended refrigeration/freezing temperature, packing date</td><td>USDA FSIS 9 CFR</td></tr>
+      <tr><td>Artisan Dairy</td><td>Ingredient list, pasteurization declaration or "raw milk" notice if applicable, state of origin</td><td>FDA 21 CFR Part 131</td></tr>
+      <tr><td>OTC / Over-the-Counter Medications</td><td>NDC number (National Drug Code), Drug Facts label, indications and contraindications</td><td>FDA 21 CFR Part 201</td></tr>
+      <tr><td>Cosmetics</td><td>INCI ingredient list, name of responsible manufacturer or distributor, country of origin</td><td>FDA MoCRA (21 U.S.C. § 364)</td></tr>
+      <tr><td>Baby Products (BABY)</td><td>Age range, CPSC safety warnings, FHSA compliance declaration</td><td>CPSC 16 CFR</td></tr>
+      <tr><td>Dietary Supplements</td><td>Supplement Facts panel, FDA disclaimer notice ("This statement has not been evaluated by the FDA...")</td><td>DSHEA / FDA 21 CFR Part 101.36</td></tr>
+    </tbody>
+  </table>
+  <div class="tx-warn">The seller is solely responsible for the accuracy of labeling information. Tiangix may audit listings at any time and request supporting documentation. False or incomplete labeling information constitutes a serious violation of these terms.</div>
+
+  <h2 class="tx-section">4. Prohibited Keywords and Phrases in Titles and Descriptions</h2>
+  <p>The following terms are strictly prohibited in titles, descriptions, tags, and any text field of a Tiangix listing:</p>
+  <div class="tx-danger">
+    <strong>Ready-to-eat prepared food:</strong>
+    <ul>
+      <li>"Listo para comer", "ready to eat", "ready-to-eat", "para llevar", "to go"</li>
+      <li>"Platillo", "guiso", "comida del día", "orden de...", "porción de..."</li>
+      <li>"Prepared taco", "ready tamales", "cooked enchiladas"</li>
+      <li>"Comida caliente", "hot food", "prepared meal", "cooked meal"</li>
+      <li>"Restaurant", "menú del día", "daily special", "street food"</li>
+    </ul>
+    <strong>Unapproved FDA health claims:</strong>
+    <ul>
+      <li>"Cures cancer", "treats diabetes", "eliminates COVID"</li>
+      <li>"Guaranteed weight loss", "100% fat burning"</li>
+      <li>Any specific disease claim without FDA/FTC approval</li>
+    </ul>
+    <strong>Other prohibited terms:</strong>
+    <ul>
+      <li>"Alcohol", "beer", "wine", "mezcal", "tequila" (alcoholic products)</li>
+      <li>"Tobacco", "cigarette", "vape", "nicotine"</li>
+      <li>Third-party registered trademarks without written authorization</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">5. Image Requirements</h2>
+  <p>Product images must meet the following standards:</p>
+  <ul>
+    <li>Minimum resolution of 800×800 pixels (1200×1200 recommended)</li>
+    <li>The product must occupy at least 85% of the main image area</li>
+    <li>No watermarks, overlaid text, or logos from other platforms</li>
+    <li>No generic stock images that do not represent the actual product</li>
+    <li>For food: the image must match the product as delivered (packaged, not prepared)</li>
+    <li>Seller must own or have a license for all published images</li>
+  </ul>
+
+  <h2 class="tx-section">6. Compliance by Seller Policy Type</h2>
+  <table class="tx-table">
+    <thead><tr><th>Seller Policy</th><th>Typical Products</th><th>Additional Listing Requirements</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">BASIC</span></td>
+        <td>Crafts, unbranded clothing, décor, stationery</td>
+        <td>Product material, country of manufacture or made in USA</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">FOOD</span></td>
+        <td>Dry groceries, canned goods, packaged sauces, snacks</td>
+        <td>Ingredients, allergens, expiration date, net weight</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--blue">HANDMADE</span></td>
+        <td>Artisan jewelry, clay, textiles, candles, soaps</td>
+        <td>Materials used, artisan process, place of manufacture</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--orange">PERISHABLE</span></td>
+        <td>Raw meats, fresh dairy, filled pastries</td>
+        <td>Storage temperature, shelf life, handling instructions, SAME_DAY_LOCAL model required for unprocessed fresh products</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--orange">REGULATED</span></td>
+        <td>OTC, cosmetics, supplements, herbal products</td>
+        <td>FDA registration number if applicable, Drug Facts or Supplement Facts, legal disclaimer</td>
+      </tr>
+      <tr>
+        <td><span class="tx-badge tx-badge--red">BABY</span></td>
+        <td>Baby clothing, toys, infant hygiene items</td>
+        <td>Age range, materials, CPSC certification, safety warnings</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">7. Listing Review Process</h2>
+  <p>Tiangix uses a mixed automated and manual review process:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div><strong>Automatic review at publication:</strong> the system verifies required fields, prohibited keywords, minimum weight, and image format. Listings that fail are marked as <code>pending_review</code>.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div><strong>Manual review for regulated categories:</strong> listings with PERISHABLE, REGULATED, or BABY seller policy are reviewed by Tiangix's compliance team within 1–3 business days before publication.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div><strong>Seller notification:</strong> if a listing is rejected, the seller receives an email with specific reasons and a 7-day window to correct and resubmit.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div><strong>Periodic audits:</strong> Tiangix may audit active listings at any time. If non-compliance is detected after publication, the listing may be suspended without prior notice.</div>
+  </div>
+
+  <h2 class="tx-section">8. Listing Suspension</h2>
+  <p>A listing may be suspended (<code>status: suspended</code>) in the following cases:</p>
+  <ul>
+    <li>Stock at 0 (automatic suspension, reactivated upon inventory update)</li>
+    <li>Non-compliance with required fields detected in audit</li>
+    <li>Use of prohibited keywords or illegal claims</li>
+    <li>Prohibited product report validated by Tiangix team</li>
+    <li>Active product recall issued by FDA, USDA, or CPSC</li>
+    <li>Intellectual property infringement complaint (DMCA or Trademark)</li>
+    <li>Product image that does not match the actual product</li>
+  </ul>
+  <div class="tx-warn">Three listing suspensions within a 90-day period may result in temporary or permanent account suspension, at Tiangix's discretion.</div>
+
+  <h2 class="tx-section">9. Seller Responsibility for Listing Accuracy</h2>
+  <p>The seller declares and warrants that all information published in their listings is:</p>
+  <ul>
+    <li><strong>True and current:</strong> price, stock, description, and images reflect the product's current state.</li>
+    <li><strong>Law compliant:</strong> the listing complies with all applicable federal and state regulations for the product type.</li>
+    <li><strong>Non-infringing of IP:</strong> the seller has rights to all images, text, and marks included in the listing.</li>
+    <li><strong>Non-misleading:</strong> no listing field contains false, exaggerated, or deceptive information.</li>
+  </ul>
+  <p>Tiangix assumes no liability for incorrect, incomplete, or fraudulent listings. Any buyer claim arising from inaccurate listing information is the seller's sole responsibility.</p>
+
+  <h2 class="tx-section">10. Compliance Contact</h2>
+  <p>For questions about listing requirements, regulated category documentation, or listing disputes, contact the Tiangix team:</p>
+  <ul>
+    <li>Email: <a href="mailto:compliance@tiangix.com">compliance@tiangix.com</a></li>
+    <li>Support hours: Monday–Saturday, 9:00 AM – 6:00 PM Central Time</li>
+  </ul>
+</div>
+
+</div>
+<footer class="tx-footer">© 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved · <a href="https://www.tiangix.com">www.tiangix.com</a> · <a href="index.html">← Legal Center</a></footer>
+</div>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('active'));document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.add('active'));document.getElementById('btn-es').classList.toggle('active',l==='es');document.getElementById('btn-en').classList.toggle('active',l==='en');document.documentElement.lang=l;}
+</script>
+</body></html>

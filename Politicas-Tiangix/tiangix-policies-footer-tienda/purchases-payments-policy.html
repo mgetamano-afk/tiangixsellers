@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Purchases & Payments / Compras y Pagos — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<header class="tx-header">
+  <a class="tx-logo" href="index.html">
+    Tiangix
+    <span class="tx-logo-sub">by Latin Ventures LLC</span>
+  </a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="tx-container">
+  <div class="tx-card">
+
+    <!-- ═══════════ ESPAÑOL ═══════════ -->
+    <div data-lang="es" class="active">
+      <h1 class="tx-policy-title">Política de Compras y Pagos</h1>
+      <p class="tx-policy-meta">Última actualización: julio 2026 · Latin Ventures LLC d/b/a Tiangix</p>
+
+      <h2 class="tx-section">1. Registro obligatorio</h2>
+      <p>Para realizar cualquier compra en Tiangix es necesario tener una cuenta registrada y verificada. <strong>No está disponible el checkout como invitado.</strong> Esto nos permite proteger al comprador, gestionar disputas y garantizar una comunicación efectiva sobre el estado de los pedidos.</p>
+
+      <h2 class="tx-section">2. Proceso de compra</h2>
+      <div class="tx-step"><div class="tx-step-num">1</div><div>Agrega productos de uno o más vendedores a tu carrito.</div></div>
+      <div class="tx-step"><div class="tx-step-num">2</div><div>Revisa tu carrito — si tienes productos de múltiples vendedores, verás <strong>sub-carritos independientes</strong> por tienda, cada uno con su subtotal, impuestos y costo de entrega.</div></div>
+      <div class="tx-step"><div class="tx-step-num">3</div><div>Ingresa tu dirección de envío y selecciona el método de entrega disponible (envío estándar o entrega same-day local, según tu ubicación).</div></div>
+      <div class="tx-step"><div class="tx-step-num">4</div><div>Revisa el resumen de tu pedido, incluyendo subtotal, impuestos (sales tax) y costos de entrega.</div></div>
+      <div class="tx-step"><div class="tx-step-num">5</div><div>Confirma y paga con un solo clic. Se genera <strong>un cargo único</strong> a tu tarjeta por el total de todos los sub-carritos.</div></div>
+      <div class="tx-step"><div class="tx-step-num">6</div><div>Recibes confirmación por correo electrónico con los detalles y número de seguimiento de cada pedido.</div></div>
+
+      <h2 class="tx-section">3. Multi-carrito</h2>
+      <p>Tiangix permite comprar productos de múltiples vendedores en una sola sesión de checkout. Cuando esto ocurre:</p>
+      <ul>
+        <li>Tu pago se procesa como <strong>una sola transacción</strong> a tu tarjeta.</li>
+        <li>Internamente se generan <strong>órdenes separadas</strong> por cada vendedor.</li>
+        <li>Cada orden tiene su propio número de seguimiento, tiempo de entrega y política de devolución independiente.</li>
+        <li>Puedes cancelar o devolver productos de un vendedor sin afectar los pedidos de otros.</li>
+      </ul>
+
+      <h2 class="tx-section">4. Métodos de pago aceptados</h2>
+      <p>Tiangix procesa todos los pagos a través de <strong>Stripe</strong>, uno de los procesadores de pagos más seguros del mundo. Aceptamos:</p>
+      <ul>
+        <li>Tarjetas de crédito: Visa, Mastercard, American Express, Discover.</li>
+        <li>Tarjetas de débito con logo Visa o Mastercard.</li>
+        <li>Métodos adicionales disponibles según región (Apple Pay, Google Pay, cuando aplique).</li>
+      </ul>
+      <div class="tx-note">Tiangix <strong>no almacena</strong> datos de tarjetas de crédito o débito. Toda la información de pago es gestionada directamente por Stripe bajo los más altos estándares de seguridad (PCI DSS Level 1).</div>
+
+      <h2 class="tx-section">5. Impuestos (Sales Tax)</h2>
+      <p>Tiangix opera como <strong>Marketplace Facilitator</strong> en todos los estados de USA donde aplica esta figura legal. Esto significa que:</p>
+      <ul>
+        <li>Tiangix calcula automáticamente el sales tax aplicable según la categoría del producto y la dirección de entrega del comprador.</li>
+        <li>Tiangix cobra el tax en nombre del estado y lo remite directamente a la autoridad fiscal correspondiente.</li>
+        <li>El vendedor <strong>no</strong> es responsable de remitir el tax por ventas realizadas en Tiangix.</li>
+        <li>El monto del tax se muestra de forma desglosada en el resumen del pedido antes de confirmar el pago.</li>
+      </ul>
+
+      <h2 class="tx-section">6. Confirmación y validez de la compra</h2>
+      <p>Una compra se considera <strong>confirmada y válida</strong> cuando:</p>
+      <ul>
+        <li>El pago ha sido procesado exitosamente por Stripe.</li>
+        <li>El comprador recibe el correo de confirmación con el número de orden.</li>
+      </ul>
+      <p>Tiangix se reserva el derecho de cancelar pedidos en casos de error de precio manifiesto, inventario agotado no actualizado, actividad fraudulenta sospechosa, o incumplimiento de los Términos y Condiciones.</p>
+
+      <h2 class="tx-section">7. Cancelación de pedidos</h2>
+      <p>Las cancelaciones están sujetas al estado del pedido:</p>
+      <ul>
+        <li><strong>Antes del envío:</strong> el comprador puede cancelar desde su historial de pedidos. El reembolso se acredita al método de pago original en 5–10 días hábiles.</li>
+        <li><strong>Después del envío:</strong> no es posible cancelar. Aplica la Política de Devoluciones.</li>
+        <li><strong>Pedidos same-day local:</strong> solo pueden cancelarse dentro de los primeros 5 minutos tras la confirmación, antes de que el driver sea asignado.</li>
+      </ul>
+
+      <h2 class="tx-section">8. Disputas y chargebacks</h2>
+      <p>Si tienes un problema con tu pedido, te pedimos que primero contactes a Tiangix a través del Centro de Ayuda. Abrir un chargeback directamente con tu banco sin contactar primero a Tiangix puede resultar en la suspensión temporal de tu cuenta mientras se resuelve la disputa.</p>
+      <div class="tx-warn">El abuso de chargebacks — en particular cuando el producto fue recibido en buen estado — puede resultar en la inhabilitación permanente de la cuenta conforme a nuestros Términos y Condiciones.</div>
+
+      <h2 class="tx-section">9. Cargos fallidos</h2>
+      <p>Si tu pago es rechazado, el pedido no será procesado. Verifica que los datos de tu tarjeta sean correctos y que tengas fondos suficientes. Puedes intentar el pago nuevamente con el mismo u otro método de pago.</p>
+
+      <h2 class="tx-section">10. Contacto</h2>
+      <p>Para dudas sobre tu compra o pago: <strong>support@tiangix.com .</strong>  Atendemos de lunes a sábado, 9:00 AM – 6:00 PM hora Central.</p>
+    </div>
+
+    <!-- ═══════════ ENGLISH ═══════════ -->
+    <div data-lang="en">
+      <h1 class="tx-policy-title">Purchases &amp; Payments Policy</h1>
+      <p class="tx-policy-meta">Last updated: July 2026 · Latin Ventures LLC d/b/a Tiangix</p>
+
+      <h2 class="tx-section">1. Account Required</h2>
+      <p>A registered and verified account is required to make any purchase on Tiangix. <strong>Guest checkout is not available.</strong> This allows us to protect buyers, manage disputes, and ensure effective communication about order status.</p>
+
+      <h2 class="tx-section">2. Purchase Process</h2>
+      <div class="tx-step"><div class="tx-step-num">1</div><div>Add products from one or more sellers to your cart.</div></div>
+      <div class="tx-step"><div class="tx-step-num">2</div><div>Review your cart — if you have products from multiple sellers, you will see <strong>independent sub-carts</strong> per store, each with its own subtotal, taxes, and delivery cost.</div></div>
+      <div class="tx-step"><div class="tx-step-num">3</div><div>Enter your shipping address and select the available delivery method (standard shipping or same-day local delivery, depending on your location).</div></div>
+      <div class="tx-step"><div class="tx-step-num">4</div><div>Review your order summary, including subtotal, sales tax, and delivery costs.</div></div>
+      <div class="tx-step"><div class="tx-step-num">5</div><div>Confirm and pay with one click. A <strong>single charge</strong> is made to your card for the total of all sub-carts.</div></div>
+      <div class="tx-step"><div class="tx-step-num">6</div><div>You receive an email confirmation with the details and tracking number for each order.</div></div>
+
+      <h2 class="tx-section">3. Multi-Cart</h2>
+      <p>Tiangix allows you to purchase products from multiple sellers in a single checkout session. When this occurs:</p>
+      <ul>
+        <li>Your payment is processed as <strong>a single transaction</strong> on your card.</li>
+        <li>Internally, <strong>separate orders</strong> are generated for each seller.</li>
+        <li>Each order has its own tracking number, delivery timeframe, and independent return policy.</li>
+        <li>You can cancel or return products from one seller without affecting orders from others.</li>
+      </ul>
+
+      <h2 class="tx-section">4. Accepted Payment Methods</h2>
+      <p>Tiangix processes all payments through <strong>Stripe</strong>, one of the world's most secure payment processors. We accept:</p>
+      <ul>
+        <li>Credit cards: Visa, Mastercard, American Express, Discover.</li>
+        <li>Debit cards with Visa or Mastercard logo.</li>
+        <li>Additional methods available by region (Apple Pay, Google Pay, where applicable).</li>
+      </ul>
+      <div class="tx-note">Tiangix does <strong>not store</strong> credit or debit card data. All payment information is managed directly by Stripe under the highest security standards (PCI DSS Level 1).</div>
+
+      <h2 class="tx-section">5. Sales Tax</h2>
+      <p>Tiangix operates as a <strong>Marketplace Facilitator</strong> in all U.S. states where this legal framework applies. This means:</p>
+      <ul>
+        <li>Tiangix automatically calculates the applicable sales tax based on the product category and buyer's delivery address.</li>
+        <li>Tiangix collects the tax on behalf of the state and remits it directly to the corresponding tax authority.</li>
+        <li>Sellers are <strong>not</strong> responsible for remitting tax on sales made through Tiangix.</li>
+        <li>The tax amount is shown as a separate line item in the order summary before payment confirmation.</li>
+      </ul>
+
+      <h2 class="tx-section">6. Purchase Confirmation and Validity</h2>
+      <p>A purchase is considered <strong>confirmed and valid</strong> when:</p>
+      <ul>
+        <li>The payment has been successfully processed by Stripe.</li>
+        <li>The buyer receives a confirmation email with the order number.</li>
+      </ul>
+      <p>Tiangix reserves the right to cancel orders in cases of obvious pricing error, non-updated out-of-stock inventory, suspected fraudulent activity, or violation of the Terms and Conditions.</p>
+
+      <h2 class="tx-section">7. Order Cancellation</h2>
+      <p>Cancellations are subject to order status:</p>
+      <ul>
+        <li><strong>Before shipment:</strong> buyers can cancel from their order history. The refund is credited to the original payment method within 5–10 business days.</li>
+        <li><strong>After shipment:</strong> cancellation is not possible. The Return Policy applies.</li>
+        <li><strong>Same-day local orders:</strong> can only be cancelled within the first 5 minutes of confirmation, before a driver is assigned.</li>
+      </ul>
+
+      <h2 class="tx-section">8. Disputes and Chargebacks</h2>
+      <p>If you have an issue with your order, we ask that you first contact Tiangix through the Help Center. Opening a chargeback directly with your bank without first contacting Tiangix may result in a temporary account suspension while the dispute is resolved.</p>
+      <div class="tx-warn">Chargeback abuse — particularly when the product was received in good condition — may result in permanent account disabling under our Terms and Conditions.</div>
+
+      <h2 class="tx-section">9. Failed Payments</h2>
+      <p>If your payment is declined, the order will not be processed. Verify that your card details are correct and that you have sufficient funds. You may attempt payment again with the same or a different payment method.</p>
+
+      <h2 class="tx-section">10. Contact</h2>
+      <p>For questions about your purchase or payment: <strong>support@tiangix.com . </strong> We are available Monday through Saturday, 9:00 AM – 6:00 PM Central Time.</p>
+    </div>
+
+  </div>
+  <footer class="tx-footer">
+    © 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved ·
+    <a href="https://www.tiangix.com">www.tiangix.com</a> ·
+    <a href="index.html">← Legal Center</a>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.classList.add('active'));
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>

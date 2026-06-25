@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Agreement / Acuerdo de Vendedor — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<header class="tx-header">
+  <a class="tx-logo" href="index.html">Tiangix <span class="tx-logo-sub">by Latin Ventures LLC</span></a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')"><span class="flag">🇲🇽</span> ES</button>
+    <div class="divider"></div>
+    <button id="btn-en" onclick="setLang('en')"><span class="flag">🇺🇸</span> EN</button>
+  </div>
+</header>
+<div class="tx-container"><div class="tx-card">
+
+<!-- ══════════ ESPAÑOL ══════════ -->
+<div data-lang="es" class="active">
+  <h1 class="tx-policy-title">Acuerdo de Vendedor</h1>
+  <p class="tx-policy-meta">Última actualización: julio 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">Este Acuerdo es vinculante para todo vendedor que complete el proceso de onboarding en Tiangix. Al hacer clic en "Acepto" durante el registro, aceptas todos los términos aquí establecidos.</div>
+
+  <h2 class="tx-section">1. Elegibilidad del vendedor</h2>
+  <p>Para operar como vendedor en Tiangix en V1/V2, debes pertenecer a uno de los siguientes tres tipos:</p>
+  <ul>
+    <li><strong>Persona física / Artesano individual:</strong> emprendedora, artesana, mamá emprendedora, productor casero.</li>
+    <li><strong>Pyme casera (Cottage Food):</strong> productor con certificación cottage food válida en su estado de operación.</li>
+    <li><strong>Negocio establecido:</strong> mercado hispano, carnicería, panadería, bodega u otro negocio con licencias vigentes en USA.</li>
+  </ul>
+  <p>Importadores de México u otros países: <strong>no disponible en V1/V2.</strong> Los importadores podrán registrarse en V3.</p>
+  <div class="tx-danger">Quedan <strong>expresamente excluidos</strong> restaurantes, taquerías, fondas, ghost kitchens, food trucks y cualquier negocio cuya operación principal sea la venta de comida preparada lista para consumo inmediato.</div>
+
+  <h2 class="tx-section">2. Requisitos de onboarding</h2>
+  <p>Todo vendedor debe completar el proceso de onboarding en Tiangix, que incluye según el tipo de seller:</p>
+  <table class="tx-table">
+    <thead><tr><th>Política de Seller</th><th>Documentos requeridos</th></tr></thead>
+    <tbody>
+      <tr><td><strong>BASIC</strong> (artesanías, no comestibles)</td><td>ID válida, cuenta bancaria vinculada (Stripe Connect), dirección fiscal</td></tr>
+      <tr><td><strong>FOOD</strong> (abarrotes secos, enlatados, snacks)</td><td>BASIC + sales tax permit estatal</td></tr>
+      <tr><td><strong>HANDMADE</strong> (artesanías, hecho a mano)</td><td>BASIC + declaración de origen artesanal</td></tr>
+      <tr><td><strong>PERISHABLE</strong> (frescos, carnes, panadería)</td><td>FOOD + food handler license + USDA/FDA cert. según aplique + acuerdo de cadena de frío</td></tr>
+      <tr><td><strong>REGULATED</strong> (OTC, cosméticos, suplementos)</td><td>FOOD + documentación FDA, etiquetado conforme MoCRA/FDA</td></tr>
+      <tr><td><strong>BABY</strong> (productos bebé)</td><td>FOOD + certificación CPSC, declaración de cumplimiento de etiquetado</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">3. Comisión de la plataforma</h2>
+  <p>Tiangix cobra una <strong>comisión plana del 12%</strong> sobre el precio de venta neto (excluye sales tax y costo de envío cobrado al comprador) de cada transacción completada. Esta comisión aplica a <strong>todos los vendedores sin excepción</strong>, incluyendo los 50 Founders.</p>
+  <div class="tx-note">La comisión se retiene automáticamente por Tiangix vía <code>application_fee_amount</code> en Stripe Connect al momento del payout. El vendedor recibe el neto tras la comisión y los fees de Stripe.</div>
+
+  <h2 class="tx-section">4. Suscripción mensual</h2>
+  <p>Adicional a la comisión, los vendedores pagan una suscripción mensual según el tier seleccionado:</p>
+  <div class="tx-tier-grid">
+    <div class="tx-tier-card">
+      <div class="tier-name">Emprendedor Individual</div>
+      <div class="tier-price">$9.99<span>/mes</span></div>
+      <div class="tier-limit">0 – 50 productos</div>
+    </div>
+    <div class="tx-tier-card">
+      <div class="tier-name">Emprendedor Negocio</div>
+      <div class="tier-price">$49.99<span>/mes</span></div>
+      <div class="tier-limit">50 – 500 productos</div>
+    </div>
+    <div class="tx-tier-card">
+      <div class="tier-name">Vendedor Empresarial</div>
+      <div class="tier-price">$99.99<span>/mes</span></div>
+      <div class="tier-limit">500+ productos</div>
+    </div>
+  </div>
+  <p><strong>Programa 50 Founders:</strong> los primeros 50 vendedores en registrarse reciben la suscripción mensual <strong>gratis de por vida</strong> ($0/mes). Sin embargo, sí pagan la comisión del 12% por cada venta desde el go-live (15 de julio de 2026).</p>
+
+  <h2 class="tx-section">5. Política de pagos (Payout) — T+10</h2>
+  <p>Los pagos a vendedores se procesan bajo el esquema <strong>T+10 días post-entrega confirmada</strong>:</p>
+  <ul>
+    <li>El countdown inicia cuando EasyPost (envío estándar) o Uber Direct/DoorDash Drive (same-day local) reportan <code>delivered</code> vía webhook. <strong>No cuenta desde la venta ni desde el envío.</strong></li>
+    <li>Si no hay disputa o devolución en 10 días, Stripe transfiere automáticamente el neto (precio − 12% comisión − fees Stripe) a la cuenta Connect del vendedor.</li>
+    <li>Si hay devolución o chargeback dentro de los 10 días: <strong>no hay payout</strong>. La comisión del 12% tampoco se cobra en esa transacción.</li>
+    <li>El dashboard del vendedor muestra dos balances: <code>pending_release</code> (dentro de los 10 días) y <code>available</code> (transferido).</li>
+  </ul>
+  <div class="tx-warn">Tiangix opera con <strong>separate charges and transfers</strong> en Stripe Connect. Los fondos se capturan en la cuenta de Tiangix al momento de la compra y se liberan al vendedor al día 10 post-entrega. El vendedor <strong>no recibe el dinero de inmediato</strong>.</div>
+
+  <h2 class="tx-section">6. Sales Tax — obligaciones del vendedor</h2>
+  <p>Tiangix opera como <strong>Marketplace Facilitator</strong>. El vendedor <strong>NO es responsable</strong> de calcular, cobrar ni remitir el sales tax por las ventas realizadas en Tiangix. Sin embargo, el vendedor debe:</p>
+  <ul>
+    <li>Declarar su nexo físico (physical nexus) durante el onboarding.</li>
+    <li>Mantener vigente su sales tax permit estatal.</li>
+    <li>Reportar sus ventas en Tiangix en su declaración de impuestos personal/empresarial como ingresos (Tiangix emitirá Form 1099-K cuando aplique).</li>
+  </ul>
+
+  <h2 class="tx-section">7. Obligaciones del vendedor</h2>
+  <ul>
+    <li>Mantener inventario actualizado en tiempo real para evitar overselling.</li>
+    <li>Despachar los pedidos dentro del tiempo comprometido en el listado.</li>
+    <li>Imprimir y usar correctamente las etiquetas de envío generadas por Tiangix vía EasyPost.</li>
+    <li>Para productos same-day local: garantizar la cadena de frío y la disponibilidad del producto antes de reactivar un artículo.</li>
+    <li>Cumplir con todos los requisitos de etiquetado FDA/USDA de sus productos.</li>
+    <li>No listar productos que no cumplen con los documentos de compliance aprobados en su onboarding.</li>
+    <li>Responder a mensajes de compradores en un plazo máximo de 24 horas hábiles.</li>
+    <li>Informar a Tiangix de inmediato ante cualquier recall, alerta de seguridad o problema regulatorio con sus productos.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Productos de temporada</h2>
+  <p>Si el vendedor habilita el atributo <code>is_seasonal</code> en un producto, acepta que:</p>
+  <ul>
+    <li>El producto se desactiva automáticamente al llegar a stock 0.</li>
+    <li>La reactivación es <strong>manual</strong> — el vendedor confirma que tiene producto físico disponible antes de reactivar.</li>
+    <li>No reactivará especulativamente sin tener inventario real.</li>
+    <li>Tiangix enviará notificación automática a la lista de espera del comprador al momento de la reactivación.</li>
+  </ul>
+
+  <h2 class="tx-section">9. Entrega same-day local — condiciones especiales</h2>
+  <ul>
+    <li>El vendedor define el <strong>radio de cobertura</strong> (millas o lista de ZIPs) y el <strong>cutoff time diario</strong>.</li>
+    <li>El mínimo de orden para activar same-day es <strong>USD $20.00 por tienda</strong>.</li>
+    <li>El costo del driver (Uber Direct / DoorDash Drive) lo paga el comprador y es visible en el checkout.</li>
+    <li>El vendedor es responsable de tener el producto listo para ser recogido por el driver en el tiempo comprometido.</li>
+    <li>Si el driver no puede recoger el pedido por error del vendedor, Tiangix puede aplicar penalizaciones o restricciones al servicio same-day.</li>
+  </ul>
+
+  <h2 class="tx-section">10. Calificaciones y rendimiento</h2>
+  <p>Tiangix monitorea el desempeño del vendedor. Las métricas incluyen: tasa de cumplimiento de pedidos, tiempo de despacho, calificación promedio de compradores, tasa de devoluciones y respuesta a mensajes. Vendedores con desempeño consistentemente bajo pueden ser suspendidos o degradados de tier.</p>
+
+  <h2 class="tx-section">11. Suspensión y terminación</h2>
+  <p>Tiangix puede suspender o terminar la cuenta del vendedor por:</p>
+  <ul>
+    <li>Publicación de productos prohibidos o falsificados.</li>
+    <li>Incumplimiento de documentos de compliance requeridos.</li>
+    <li>Tasas de devolución o chargeback excesivas.</li>
+    <li>Actividad fraudulenta o engañosa hacia compradores.</li>
+    <li>Violación de cualquier cláusula de este Acuerdo.</li>
+  </ul>
+  <p>En caso de terminación, los fondos en <code>pending_release</code> permanecerán retenidos durante el período de investigación (hasta 90 días).</p>
+
+  <h2 class="tx-section">12. Indemnización</h2>
+  <p>El vendedor acepta indemnizar y mantener indemne a Latin Ventures LLC de cualquier reclamo de terceros (compradores, organismos regulatorios, competidores) derivado de: productos defectuosos o peligrosos, violación de derechos de propiedad intelectual, incumplimiento de etiquetado FDA/USDA, o incumplimiento de este Acuerdo.</p>
+
+  <h2 class="tx-section">13. Modificaciones</h2>
+  <p>Tiangix puede modificar este Acuerdo con <strong>30 días</strong> de aviso previo. El uso continuado de la plataforma tras ese plazo implica aceptación. Para cambios urgentes por mandato legal o regulatorio, el plazo puede ser menor.</p>
+
+  <h2 class="tx-section">14. Contacto y soporte a vendedores</h2>
+  <p>Para consultas del vendedor: <strong>sellers@tiangix.com</strong>. Soporte: lunes a sábado, 9:00 AM – 6:00 PM hora Central.</p>
+</div>
+
+<!-- ══════════ ENGLISH ══════════ -->
+<div data-lang="en">
+  <h1 class="tx-policy-title">Seller Agreement</h1>
+  <p class="tx-policy-meta">Last updated: July 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">This Agreement is binding for all sellers who complete the onboarding process on Tiangix. By clicking "I Agree" during registration, you accept all terms set forth herein.</div>
+
+  <h2 class="tx-section">1. Seller Eligibility</h2>
+  <p>To operate as a seller on Tiangix in V1/V2, you must belong to one of the following three types:</p>
+  <ul>
+    <li><strong>Individual / Artisan:</strong> entrepreneur, artisan, home producer.</li>
+    <li><strong>Home Business (Cottage Food):</strong> producer with valid cottage food certification in their state of operation.</li>
+    <li><strong>Established Business:</strong> Hispanic market, butcher shop, bakery, bodega, or other business with active U.S. licenses.</li>
+  </ul>
+  <p>Importers from Mexico or other countries: <strong>not available in V1/V2.</strong> Importers may register in V3.</p>
+  <div class="tx-danger">The following are <strong>expressly excluded</strong>: restaurants, taquerías, fondas, ghost kitchens, food trucks, and any business whose primary operation is the sale of ready-to-eat prepared food.</div>
+
+  <h2 class="tx-section">2. Onboarding Requirements</h2>
+  <p>All sellers must complete Tiangix's onboarding process, which includes documentation based on seller type:</p>
+  <table class="tx-table">
+    <thead><tr><th>Seller Policy</th><th>Required Documents</th></tr></thead>
+    <tbody>
+      <tr><td><strong>BASIC</strong> (artisan goods, non-food)</td><td>Valid ID, linked bank account (Stripe Connect), tax address</td></tr>
+      <tr><td><strong>FOOD</strong> (dry groceries, canned goods, snacks)</td><td>BASIC + state sales tax permit</td></tr>
+      <tr><td><strong>HANDMADE</strong> (artisan crafts)</td><td>BASIC + artisan origin declaration</td></tr>
+      <tr><td><strong>PERISHABLE</strong> (fresh, meat, bakery)</td><td>FOOD + food handler license + USDA/FDA cert. as applicable + cold chain agreement</td></tr>
+      <tr><td><strong>REGULATED</strong> (OTC, cosmetics, supplements)</td><td>FOOD + FDA documentation, labeling compliant with MoCRA/FDA</td></tr>
+      <tr><td><strong>BABY</strong> (baby products)</td><td>FOOD + CPSC certification, labeling compliance declaration</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="tx-section">3. Platform Commission</h2>
+  <p>Tiangix charges a <strong>flat 12% commission</strong> on the net sale price (excluding sales tax and shipping charged to the buyer) of each completed transaction. This commission applies to <strong>all sellers without exception</strong>, including the 50 Founders.</p>
+  <div class="tx-note">The commission is automatically retained by Tiangix via <code>application_fee_amount</code> in Stripe Connect at the time of payout. The seller receives the net amount after the commission and Stripe fees.</div>
+
+  <h2 class="tx-section">4. Monthly Subscription</h2>
+  <p>In addition to the commission, sellers pay a monthly subscription based on the selected tier:</p>
+  <div class="tx-tier-grid">
+    <div class="tx-tier-card">
+      <div class="tier-name">Individual Entrepreneur</div>
+      <div class="tier-price">$9.99<span>/mo</span></div>
+      <div class="tier-limit">0 – 50 products</div>
+    </div>
+    <div class="tx-tier-card">
+      <div class="tier-name">Business Entrepreneur</div>
+      <div class="tier-price">$49.99<span>/mo</span></div>
+      <div class="tier-limit">50 – 500 products</div>
+    </div>
+    <div class="tx-tier-card">
+      <div class="tier-name">Enterprise Seller</div>
+      <div class="tier-price">$99.99<span>/mo</span></div>
+      <div class="tier-limit">500+ products</div>
+    </div>
+  </div>
+  <p><strong>50 Founders Program:</strong> the first 50 sellers to register receive a <strong>lifetime free monthly subscription</strong> ($0/month). However, they do pay the 12% commission on every sale from go-live (July 15, 2026).</p>
+
+  <h2 class="tx-section">5. Payout Policy — T+10</h2>
+  <p>Seller payments are processed under the <strong>T+10 days post-confirmed delivery</strong> scheme:</p>
+  <ul>
+    <li>The countdown begins when EasyPost (standard shipping) or Uber Direct/DoorDash Drive (same-day local) report <code>delivered</code> via webhook. <strong>It does not count from the sale or shipment date.</strong></li>
+    <li>If no dispute or return occurs within 10 days, Stripe automatically transfers the net amount (price − 12% commission − Stripe fees) to the seller's Connect account.</li>
+    <li>If a return or chargeback occurs within 10 days: <strong>no payout</strong>. The 12% commission is also not charged on that transaction.</li>
+    <li>The seller dashboard shows two balances: <code>pending_release</code> (within 10 days) and <code>available</code> (transferred).</li>
+  </ul>
+  <div class="tx-warn">Tiangix operates with <strong>separate charges and transfers</strong> in Stripe Connect. Funds are captured in Tiangix's account at purchase time and released to the seller on day 10 post-delivery. The seller <strong>does not receive money immediately</strong>.</div>
+
+  <h2 class="tx-section">6. Sales Tax — Seller Obligations</h2>
+  <p>Tiangix operates as a <strong>Marketplace Facilitator</strong>. The seller is <strong>NOT responsible</strong> for calculating, collecting, or remitting sales tax on sales made through Tiangix. However, sellers must:</p>
+  <ul>
+    <li>Declare their physical nexus during onboarding.</li>
+    <li>Maintain an active state sales tax permit.</li>
+    <li>Report Tiangix sales on their personal/business tax return as income (Tiangix will issue Form 1099-K when applicable).</li>
+  </ul>
+
+  <h2 class="tx-section">7. Seller Obligations</h2>
+  <ul>
+    <li>Maintain real-time updated inventory to avoid overselling.</li>
+    <li>Dispatch orders within the timeframe committed in the listing.</li>
+    <li>Correctly print and use the shipping labels generated by Tiangix via EasyPost.</li>
+    <li>For same-day local products: guarantee cold chain integrity and product availability before reactivating an item.</li>
+    <li>Comply with all FDA/USDA labeling requirements for their products.</li>
+    <li>Not list products that do not comply with the compliance documents approved during onboarding.</li>
+    <li>Respond to buyer messages within a maximum of 24 business hours.</li>
+    <li>Notify Tiangix immediately of any recall, safety alert, or regulatory issue with their products.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Seasonal Products</h2>
+  <p>If the seller enables the <code>is_seasonal</code> attribute on a product, they agree that:</p>
+  <ul>
+    <li>The product will automatically deactivate when stock reaches 0.</li>
+    <li>Reactivation is <strong>manual</strong> — the seller confirms physical product availability before reactivating.</li>
+    <li>They will not reactivate speculatively without actual inventory.</li>
+    <li>Tiangix will automatically notify the buyer waiting list upon reactivation.</li>
+  </ul>
+
+  <h2 class="tx-section">9. Same-Day Local Delivery — Special Conditions</h2>
+  <ul>
+    <li>The seller defines the <strong>coverage radius</strong> (miles or ZIP list) and the <strong>daily cutoff time</strong>.</li>
+    <li>The minimum order to activate same-day is <strong>USD $20.00 per store</strong>.</li>
+    <li>The driver cost (Uber Direct / DoorDash Drive) is paid by the buyer and visible at checkout.</li>
+    <li>The seller is responsible for having the product ready for pickup by the driver within the committed timeframe.</li>
+    <li>If the driver cannot pick up the order due to seller error, Tiangix may apply penalties or restrictions to the same-day service.</li>
+  </ul>
+
+  <h2 class="tx-section">10. Ratings and Performance</h2>
+  <p>Tiangix monitors seller performance. Metrics include: order fulfillment rate, dispatch time, average buyer rating, return rate, and response to messages. Sellers with consistently poor performance may be suspended or tier-downgraded.</p>
+
+  <h2 class="tx-section">11. Suspension and Termination</h2>
+  <p>Tiangix may suspend or terminate a seller account for:</p>
+  <ul>
+    <li>Listing prohibited or counterfeit products.</li>
+    <li>Non-compliance with required compliance documents.</li>
+    <li>Excessive return or chargeback rates.</li>
+    <li>Fraudulent or deceptive behavior toward buyers.</li>
+    <li>Violation of any clause of this Agreement.</li>
+  </ul>
+  <p>Upon termination, funds in <code>pending_release</code> remain held during the investigation period (up to 90 days).</p>
+
+  <h2 class="tx-section">12. Indemnification</h2>
+  <p>The seller agrees to indemnify and hold harmless Latin Ventures LLC from any third-party claims (buyers, regulatory bodies, competitors) arising from: defective or dangerous products, intellectual property rights violations, FDA/USDA labeling non-compliance, or breach of this Agreement.</p>
+
+  <h2 class="tx-section">13. Modifications</h2>
+  <p>Tiangix may modify this Agreement with <strong>30 days</strong> prior notice. Continued use of the platform after that period implies acceptance. For urgent changes due to legal or regulatory mandate, the period may be shorter.</p>
+
+  <h2 class="tx-section">14. Seller Contact and Support</h2>
+  <p>For seller inquiries: <strong>sellers@tiangix.com</strong>. Support: Monday through Saturday, 9:00 AM – 6:00 PM Central Time.</p>
+</div>
+
+</div>
+<footer class="tx-footer">© 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved · <a href="https://www.tiangix.com">www.tiangix.com</a> · <a href="index.html">← Legal Center</a></footer>
+</div>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('active'));document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.add('active'));document.getElementById('btn-es').classList.toggle('active',l==='es');document.getElementById('btn-en').classList.toggle('active',l==='en');document.documentElement.lang=l;}
+</script>
+</body></html>

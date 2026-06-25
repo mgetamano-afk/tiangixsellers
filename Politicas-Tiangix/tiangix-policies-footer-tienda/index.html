@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal Policies — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<header class="tx-header">
+  <a class="tx-logo" href="https://www.tiangix.com">
+    Tiangix
+    <span class="tx-logo-sub">by Latin Ventures LLC</span>
+  </a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="tx-container">
+
+  <!-- ESPAÑOL -->
+  <div data-lang="es" class="active">
+    <div class="tx-card">
+      <h1 class="tx-policy-title">Centro Legal</h1>
+      <p class="tx-policy-meta">Latin Ventures LLC d/b/a Tiangix · Sallisaw, Oklahoma, USA · © 2026</p>
+      <p>Encuentra aquí todas las políticas que rigen el uso de la plataforma Tiangix. Cada política está disponible en español e inglés.</p>
+      <div class="tx-index-grid">
+        <a class="tx-index-item" href="return-policy.html">
+          <span class="icon">↩️</span>
+          <div class="title">Política de Devoluciones</div>
+          <div class="desc">Ventanas, condiciones, productos no retornables y proceso de reclamo.</div>
+        </a>
+        <a class="tx-index-item" href="privacy-policy.html">
+          <span class="icon">🔒</span>
+          <div class="title">Política de Privacidad</div>
+          <div class="desc">Qué datos recopilamos, cómo los usamos y tus derechos CCPA.</div>
+        </a>
+        <a class="tx-index-item" href="terms-and-conditions.html">
+          <span class="icon">📋</span>
+          <div class="title">Términos y Condiciones</div>
+          <div class="desc">Reglas de uso, responsabilidades y ley aplicable (Oklahoma).</div>
+        </a>
+        <a class="tx-index-item" href="purchases-payments-policy.html">
+          <span class="icon">💳</span>
+          <div class="title">Política de Compras y Pagos</div>
+          <div class="desc">Proceso de pago con Stripe, sales tax, multi-carrito y cancelaciones.</div>
+        </a>
+        <a class="tx-index-item" href="shipping-delivery-policy.html">
+          <span class="icon">📦</span>
+          <div class="title">Política de Envíos y Entregas</div>
+          <div class="desc">Envío USA-wide (EasyPost) y entrega same-day local (Uber Direct / DoorDash).</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <div class="tx-card">
+      <h1 class="tx-policy-title">Legal Center</h1>
+      <p class="tx-policy-meta">Latin Ventures LLC d/b/a Tiangix · Sallisaw, Oklahoma, USA · © 2026</p>
+      <p>Find all policies governing the use of the Tiangix platform here. Each policy is available in both Spanish and English.</p>
+      <div class="tx-index-grid">
+        <a class="tx-index-item" href="return-policy.html">
+          <span class="icon">↩️</span>
+          <div class="title">Return Policy</div>
+          <div class="desc">Windows, conditions, non-returnable items, and the claims process.</div>
+        </a>
+        <a class="tx-index-item" href="privacy-policy.html">
+          <span class="icon">🔒</span>
+          <div class="title">Privacy Policy</div>
+          <div class="desc">What data we collect, how we use it, and your CCPA rights.</div>
+        </a>
+        <a class="tx-index-item" href="terms-and-conditions.html">
+          <span class="icon">📋</span>
+          <div class="title">Terms &amp; Conditions</div>
+          <div class="desc">Usage rules, responsibilities, and governing law (Oklahoma).</div>
+        </a>
+        <a class="tx-index-item" href="purchases-payments-policy.html">
+          <span class="icon">💳</span>
+          <div class="title">Purchases &amp; Payments Policy</div>
+          <div class="desc">Stripe checkout, sales tax, multi-cart, and cancellations.</div>
+        </a>
+        <a class="tx-index-item" href="shipping-delivery-policy.html">
+          <span class="icon">📦</span>
+          <div class="title">Shipping &amp; Delivery Policy</div>
+          <div class="desc">USA-wide shipping (EasyPost) and same-day local (Uber Direct / DoorDash).</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="tx-footer">
+    © 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved ·
+    <a href="https://www.tiangix.com">www.tiangix.com</a>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.classList.add('active'));
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+</script>
+
+</body>
+</html>

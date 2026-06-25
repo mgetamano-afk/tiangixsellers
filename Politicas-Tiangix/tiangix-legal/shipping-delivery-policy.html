@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shipping &amp; Delivery Policy — Tiangix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<header class="tx-header">
+  <a class="tx-logo" href="index.html">Tiangix <span class="tx-logo-sub">by Latin Ventures LLC</span></a>
+  <div class="tx-lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')"><span class="flag">🇲🇽</span> ES</button>
+    <div class="divider"></div>
+    <button id="btn-en" onclick="setLang('en')"><span class="flag">🇺🇸</span> EN</button>
+  </div>
+</header>
+<div class="tx-container"><div class="tx-card">
+
+<!-- ══════════ ESPAÑOL ══════════ -->
+<div data-lang="es" class="active">
+  <h1 class="tx-policy-title">Política de Envíos y Entregas</h1>
+  <p class="tx-policy-meta">Última actualización: julio 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">Tiangix opera como plataforma logística intermediaria. Todos los envíos son gestionados a través de la cuenta maestra de EasyPost de Tiangix (modelo SHIPPING) o mediante Uber Direct/DoorDash Drive para entregas el mismo día (modelo SAME_DAY_LOCAL). Cada modelo tiene reglas distintas, descritas a continuación.</div>
+
+  <h2 class="tx-section">1. Modelos de envío disponibles</h2>
+
+  <div class="tx-model-card">
+    <span class="tx-model-tag">MODELO A — SHIPPING</span>
+    <h3>Envío estándar nacional (EasyPost)</h3>
+    <ul>
+      <li><strong>Disponible en:</strong> los 50 estados de USA</li>
+      <li><strong>Transportistas:</strong> USPS, UPS, FedEx, DHL (selección automática por tarifa óptima vía EasyPost)</li>
+      <li><strong>Tiempo estimado de entrega:</strong> 3–7 días hábiles desde la generación de la etiqueta</li>
+      <li><strong>Productos permitidos:</strong> no perecederos, artesanías, abarrotes secos, cosméticos, OTC, artículos bebé, ropa, decoración, cottage food empacado y sellado</li>
+      <li><strong>Costo de envío:</strong> calculado en tiempo real por EasyPost según peso, dimensiones y destino; mostrado al comprador antes de confirmar la compra</li>
+      <li><strong>Generación de etiqueta:</strong> automática por Tiangix vía cuenta maestra EasyPost tras confirmación de pago</li>
+      <li><strong>Responsabilidad del empaque:</strong> el vendedor es responsable del empaque adecuado y de la veracidad del peso declarado en el listing</li>
+    </ul>
+  </div>
+
+  <div class="tx-model-card tx-model-card--local">
+    <span class="tx-model-tag">MODELO B — SAME_DAY_LOCAL</span>
+    <h3>Entrega el mismo día (Uber Direct / DoorDash Drive)</h3>
+    <ul>
+      <li><strong>Disponible en:</strong> área geofenced definida por cada vendedor al configurar su tienda (radio máximo definido por el servicio de delivery)</li>
+      <li><strong>Transportistas:</strong> Uber Direct y DoorDash Drive (selección por disponibilidad en la zona)</li>
+      <li><strong>Tiempo estimado de entrega:</strong> mismo día, generalmente 30–120 minutos desde que el repartidor recoge el pedido</li>
+      <li><strong>Productos permitidos:</strong> perecederos frescos, carnes, lácteos, panadería con relleno, productos que requieren cadena de frío, artículos de alta rotación</li>
+      <li><strong>Pedido mínimo:</strong> $20.00 por tienda (sub-carrito) para activar la opción same-day local</li>
+      <li><strong>Costo de entrega:</strong> lo paga el comprador; monto variable según distancia y demanda en la zona</li>
+      <li><strong>Cutoff time:</strong> definido por el vendedor en su configuración de tienda (ej. 4:00 pm CT); pedidos después del cutoff se procesan al día siguiente</li>
+      <li><strong>Geofencing:</strong> el comprador solo puede seleccionar este modelo si su dirección de entrega está dentro del área geofenced del vendedor</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">2. Generación de etiquetas — cuenta maestra EasyPost</h2>
+  <p>Tiangix mantiene una <strong>cuenta maestra de EasyPost</strong> que centraliza la generación de etiquetas para todos los vendedores en el modelo SHIPPING. El flujo es:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>El comprador confirma el pedido y el pago es capturado por Stripe.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>Tiangix genera automáticamente la etiqueta de envío vía EasyPost con el peso y dimensiones declarados en el listing. La etiqueta es emitida bajo la cuenta maestra de Tiangix.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>El vendedor recibe la etiqueta en su dashboard de Tiangix y en su correo electrónico registrado. El vendedor imprime y adhiere la etiqueta al paquete.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>El vendedor entrega el paquete al transportista en el plazo máximo de <strong>2 días hábiles</strong> desde la generación de la etiqueta. Si no se entrega en ese plazo, la etiqueta puede ser cancelada y el pedido puede ser disputado por el comprador.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">5</div>
+    <div>EasyPost envía actualizaciones de tracking en tiempo real al comprador y al vendedor vía webhook.</div>
+  </div>
+  <div class="tx-warn">El costo de las etiquetas de envío es cobrado al vendedor como parte del settlement de la transacción. Peso o dimensiones declarados incorrectamente que generen un ajuste de cargo por parte del transportista serán cobrados íntegramente al vendedor.</div>
+
+  <h2 class="tx-section">3. Tracking y notificaciones</h2>
+  <p>Tanto el comprador como el vendedor reciben actualizaciones de estado del envío:</p>
+  <ul>
+    <li><strong>Eventos clave:</strong> Etiqueta creada, Paquete recibido por transportista, En tránsito, En camino de entrega (out for delivery), Entregado</li>
+    <li><strong>Canal de notificaciones:</strong> correo electrónico y notificación push en la app Tiangix</li>
+    <li><strong>Evento "Delivered":</strong> activa el contador T+10 para el payout del vendedor</li>
+    <li><strong>Intento fallido de entrega:</strong> el comprador tiene 5 días para reagendar antes de que el paquete sea devuelto al vendedor</li>
+  </ul>
+
+  <h2 class="tx-section">4. Responsabilidades del vendedor — empaque y cadena de frío</h2>
+  <h3 class="tx-subsection">4.1 Empaque general (todos los modelos)</h3>
+  <ul>
+    <li>El vendedor es responsable de empacar cada pedido de forma segura para que llegue en condiciones óptimas al comprador.</li>
+    <li>Los productos frágiles deben ir con material de amortiguamiento adecuado (burbuja, foam, relleno).</li>
+    <li>Cada paquete debe llevar la etiqueta generada por Tiangix en lugar visible y sin daños.</li>
+    <li>El vendedor debe incluir un comprobante del pedido (número de orden, nombre del comprador, contenido) dentro del paquete.</li>
+  </ul>
+  <h3 class="tx-subsection">4.2 Cadena de frío — productos PERISHABLE (SAME_DAY_LOCAL)</h3>
+  <ul>
+    <li>Carnes crudas y lácteos frescos deben entregarse al repartidor a temperatura ≤ 40°F (4°C).</li>
+    <li>Los productos congelados deben entregarse a temperatura ≤ 0°F (−18°C).</li>
+    <li>El empaque debe incluir hielo seco o paquetes de gel refrigerante suficientes para mantener la temperatura durante el tiempo estimado de tránsito.</li>
+    <li>El tiempo máximo de tránsito para perecederos en SAME_DAY_LOCAL es de 2 horas desde el recojo del repartidor. Si el tiempo estimado excede este límite, la orden no debe aceptarse.</li>
+    <li>El vendedor asume responsabilidad total por productos perecederos que lleguen en mal estado por fallas de empaque o cadena de frío a su cargo.</li>
+  </ul>
+  <div class="tx-danger">Tiangix prohíbe el envío de carnes crudas, lácteos frescos sin procesar y productos que requieren cadena de frío ininterrumpida a través del modelo SHIPPING (envío nacional por courrier). Estos productos solo pueden venderse por SAME_DAY_LOCAL.</div>
+
+  <h2 class="tx-section">5. Dirección de entrega</h2>
+  <ul>
+    <li>El comprador ingresa la dirección de entrega al momento de la compra. La dirección es validada por EasyPost antes de generar la etiqueta.</li>
+    <li>Tiangix no realiza entregas a apartados postales (PO Boxes) para pedidos con modelos SAME_DAY_LOCAL.</li>
+    <li>Para SHIPPING: se aceptan PO Boxes solo con transportistas USPS.</li>
+    <li>El comprador es responsable de ingresar una dirección válida y completa. Cargos por dirección incorrecta (Address Correction Fee) del transportista serán cobrados al comprador.</li>
+    <li>Tiangix no gestiona entregas a direcciones fuera de los 50 estados de USA (ni Puerto Rico, Guam, ni territorios en V1/V2).</li>
+  </ul>
+
+  <h2 class="tx-section">6. Paquetes perdidos o dañados</h2>
+  <p>En caso de que un paquete sea reportado como perdido o llegue dañado:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>El comprador debe reportar el problema dentro de los <strong>10 días hábiles</strong> siguientes al evento "Delivered" (o al plazo estimado de entrega si el paquete no se marcó como entregado). Reportes fuera de ese plazo no serán procesados.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>El comprador debe proporcionar: fotos del paquete recibido (si aplica), número de tracking, descripción del daño o evidencia de no entrega.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>Tiangix abrirá un claim ante EasyPost/transportista correspondiente. El proceso de claim puede tomar de 7 a 21 días hábiles según el transportista.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>Si el claim es aprobado, el comprador recibe reembolso total o reenvío del producto. Si es denegado (por empaque inadecuado del vendedor), el vendedor asume el costo.</div>
+  </div>
+  <div class="tx-note">EasyPost incluye cobertura básica de seguro de envío. Vendedores que envíen productos de alto valor deben adquirir seguro adicional. Tiangix no ofrece garantías adicionales de seguro más allá de la cobertura estándar de EasyPost.</div>
+
+  <h2 class="tx-section">7. Restricciones interestatales para perecederos</h2>
+  <p>El envío interestatal de productos alimenticios perecederos está sujeto a regulaciones federales y estatales:</p>
+  <ul>
+    <li><strong>Carnes crudas:</strong> solo pueden enviarse interestatalmente con sello de inspección USDA FSIS (9 CFR). Carnes sin inspección federal no pueden cruzar fronteras estatales.</li>
+    <li><strong>Lácteos artesanales (raw milk):</strong> la venta y envío interestatal de leche sin pasteurizar está prohibida por la FDA (21 CFR § 1240.61). Solo se permite su venta bajo SAME_DAY_LOCAL dentro de estados donde sea legal.</li>
+    <li><strong>Cottage food:</strong> la mayoría de los estados prohíben la venta interestatal de cottage food. El vendedor es responsable de verificar la legislación de su estado de origen y del estado de destino.</li>
+    <li><strong>Productos botánicos y herbales:</strong> algunos estados tienen restricciones específicas sobre ciertos ingredientes. El vendedor debe verificar la legalidad en el estado de destino.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Fuerza mayor</h2>
+  <p>Tiangix no es responsable por retrasos o fallos de entrega causados por eventos de fuerza mayor, incluyendo:</p>
+  <ul>
+    <li>Desastres naturales (huracanes, tornados, inundaciones, nevadas extremas)</li>
+    <li>Huelgas o paros de transportistas</li>
+    <li>Restricciones gubernamentales o cierres de fronteras</li>
+    <li>Pandemias o emergencias de salud pública declaradas</li>
+    <li>Fallas masivas de infraestructura de telecomunicaciones</li>
+  </ul>
+  <p>En casos de fuerza mayor, Tiangix notificará a compradores y vendedores afectados a través de los canales de comunicación registrados con instrucciones sobre el manejo de los pedidos impactados.</p>
+
+  <h2 class="tx-section">9. Contacto para soporte de envíos</h2>
+  <ul>
+    <li>Email: <a href="mailto:shipping@tiangix.com">shipping@tiangix.com</a></li>
+    <li>Horario: lunes–sábado, 9:00 am – 6:00 pm Central Time</li>
+    <li>Para rastreo en tiempo real: consultar el número de tracking en el sitio del transportista correspondiente</li>
+  </ul>
+</div>
+
+<!-- ══════════ ENGLISH ══════════ -->
+<div data-lang="en">
+  <h1 class="tx-policy-title">Shipping &amp; Delivery Policy</h1>
+  <p class="tx-policy-meta">Last updated: July 2026 · Latin Ventures LLC d/b/a Tiangix · Arkansas-Oklahoma, USA</p>
+  <div class="tx-note">Tiangix operates as an intermediary logistics platform. All shipments are managed through Tiangix's EasyPost master account (SHIPPING model) or via Uber Direct/DoorDash Drive for same-day deliveries (SAME_DAY_LOCAL model). Each model has distinct rules, described below.</div>
+
+  <h2 class="tx-section">1. Available Shipping Models</h2>
+
+  <div class="tx-model-card">
+    <span class="tx-model-tag">MODEL A — SHIPPING</span>
+    <h3>Standard National Shipping (EasyPost)</h3>
+    <ul>
+      <li><strong>Available in:</strong> all 50 US states</li>
+      <li><strong>Carriers:</strong> USPS, UPS, FedEx, DHL (automatic selection by optimal rate via EasyPost)</li>
+      <li><strong>Estimated delivery time:</strong> 3–7 business days from label generation</li>
+      <li><strong>Allowed products:</strong> non-perishables, crafts, dry groceries, cosmetics, OTC, baby items, clothing, décor, packaged and sealed cottage food</li>
+      <li><strong>Shipping cost:</strong> calculated in real time by EasyPost based on weight, dimensions, and destination; shown to buyer before confirming purchase</li>
+      <li><strong>Label generation:</strong> automatically by Tiangix via EasyPost master account upon payment confirmation</li>
+      <li><strong>Packaging responsibility:</strong> seller is responsible for proper packaging and accuracy of declared weight in the listing</li>
+    </ul>
+  </div>
+
+  <div class="tx-model-card tx-model-card--local">
+    <span class="tx-model-tag">MODEL B — SAME_DAY_LOCAL</span>
+    <h3>Same-Day Delivery (Uber Direct / DoorDash Drive)</h3>
+    <ul>
+      <li><strong>Available in:</strong> geofenced area defined by each seller when setting up their store (maximum radius defined by the delivery service)</li>
+      <li><strong>Carriers:</strong> Uber Direct and DoorDash Drive (selected by availability in the area)</li>
+      <li><strong>Estimated delivery time:</strong> same day, generally 30–120 minutes from when the courier picks up the order</li>
+      <li><strong>Allowed products:</strong> fresh perishables, meats, dairy, filled pastries, products requiring cold chain, high-turnover items</li>
+      <li><strong>Minimum order:</strong> $20.00 per store (sub-cart) to activate the same-day local option</li>
+      <li><strong>Delivery cost:</strong> paid by buyer; variable amount based on distance and demand in the area</li>
+      <li><strong>Cutoff time:</strong> defined by seller in their store settings (e.g., 4:00 PM CT); orders placed after cutoff are processed the next day</li>
+      <li><strong>Geofencing:</strong> buyer can only select this model if their delivery address is within the seller's geofenced area</li>
+    </ul>
+  </div>
+
+  <h2 class="tx-section">2. Label Generation — EasyPost Master Account</h2>
+  <p>Tiangix maintains an <strong>EasyPost master account</strong> that centralizes label generation for all sellers under the SHIPPING model. The flow is:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>Buyer confirms the order and payment is captured by Stripe.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>Tiangix automatically generates the shipping label via EasyPost using the weight and dimensions declared in the listing. The label is issued under Tiangix's master account.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>The seller receives the label in their Tiangix dashboard and at their registered email. The seller prints and affixes the label to the package.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>The seller must hand the package to the carrier within a maximum of <strong>2 business days</strong> from label generation. If not delivered within that period, the label may be cancelled and the order may be disputed by the buyer.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">5</div>
+    <div>EasyPost sends real-time tracking updates to both buyer and seller via webhook.</div>
+  </div>
+  <div class="tx-warn">Shipping label costs are charged to the seller as part of the transaction settlement. Incorrectly declared weight or dimensions that generate a carrier surcharge will be charged in full to the seller.</div>
+
+  <h2 class="tx-section">3. Tracking and Notifications</h2>
+  <p>Both buyer and seller receive shipment status updates:</p>
+  <ul>
+    <li><strong>Key events:</strong> Label created, Package received by carrier, In transit, Out for delivery, Delivered</li>
+    <li><strong>Notification channels:</strong> email and push notification in the Tiangix app</li>
+    <li><strong>"Delivered" event:</strong> triggers the T+10 countdown for seller payout</li>
+    <li><strong>Failed delivery attempt:</strong> buyer has 5 days to reschedule before the package is returned to seller</li>
+  </ul>
+
+  <h2 class="tx-section">4. Seller Responsibilities — Packaging and Cold Chain</h2>
+  <h3 class="tx-subsection">4.1 General Packaging (all models)</h3>
+  <ul>
+    <li>Seller is responsible for packing each order safely so it arrives in optimal condition to the buyer.</li>
+    <li>Fragile products must include appropriate cushioning material (bubble wrap, foam, filler).</li>
+    <li>Each package must carry the Tiangix-generated label in a visible location and without damage.</li>
+    <li>Seller must include a packing slip (order number, buyer name, contents) inside the package.</li>
+  </ul>
+  <h3 class="tx-subsection">4.2 Cold Chain — PERISHABLE Products (SAME_DAY_LOCAL)</h3>
+  <ul>
+    <li>Raw meats and fresh dairy must be handed to the courier at a temperature ≤ 40°F (4°C).</li>
+    <li>Frozen products must be handed at a temperature ≤ 0°F (−18°C).</li>
+    <li>Packaging must include dry ice or refrigerant gel packs sufficient to maintain temperature during the estimated transit time.</li>
+    <li>Maximum transit time for perishables in SAME_DAY_LOCAL is 2 hours from courier pickup. If the estimated time exceeds this limit, the order must not be accepted.</li>
+    <li>Seller assumes full responsibility for perishable products that arrive in poor condition due to packaging failures or cold chain failures on their part.</li>
+  </ul>
+  <div class="tx-danger">Tiangix prohibits shipping raw meats, unprocessed fresh dairy, and products requiring uninterrupted cold chain via the SHIPPING model (national courier). These products may only be sold through SAME_DAY_LOCAL.</div>
+
+  <h2 class="tx-section">5. Delivery Address</h2>
+  <ul>
+    <li>Buyer enters the delivery address at the time of purchase. The address is validated by EasyPost before label generation.</li>
+    <li>Tiangix does not deliver to PO Boxes for SAME_DAY_LOCAL orders.</li>
+    <li>For SHIPPING: PO Boxes are accepted only with USPS carriers.</li>
+    <li>Buyer is responsible for entering a valid and complete address. Address Correction Fees from the carrier will be charged to the buyer.</li>
+    <li>Tiangix does not manage deliveries to addresses outside the 50 US states (no Puerto Rico, Guam, or territories in V1/V2).</li>
+  </ul>
+
+  <h2 class="tx-section">6. Lost or Damaged Packages</h2>
+  <p>If a package is reported lost or arrives damaged:</p>
+  <div class="tx-step">
+    <div class="tx-step-num">1</div>
+    <div>Buyer must report the issue within <strong>10 business days</strong> following the "Delivered" event (or the estimated delivery date if the package was never marked as delivered). Reports outside this window will not be processed.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">2</div>
+    <div>Buyer must provide: photos of the received package (if applicable), tracking number, description of damage, or evidence of non-delivery.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">3</div>
+    <div>Tiangix will open a claim with the corresponding EasyPost/carrier. The claims process may take 7 to 21 business days depending on the carrier.</div>
+  </div>
+  <div class="tx-step">
+    <div class="tx-step-num">4</div>
+    <div>If the claim is approved, the buyer receives a full refund or product reshipment. If denied (due to inadequate seller packaging), the seller bears the cost.</div>
+  </div>
+  <div class="tx-note">EasyPost includes basic shipping insurance coverage. Sellers shipping high-value products should purchase additional insurance. Tiangix does not provide additional insurance guarantees beyond EasyPost's standard coverage.</div>
+
+  <h2 class="tx-section">7. Interstate Restrictions for Perishables</h2>
+  <p>Interstate shipping of perishable food products is subject to federal and state regulations:</p>
+  <ul>
+    <li><strong>Raw meats:</strong> may only be shipped interstate with a USDA FSIS inspection seal (9 CFR). Meats without federal inspection cannot cross state lines.</li>
+    <li><strong>Artisan dairy (raw milk):</strong> interstate sale and shipping of unpasteurized milk is prohibited by the FDA (21 CFR § 1240.61). Only permitted under SAME_DAY_LOCAL within states where it is legal.</li>
+    <li><strong>Cottage food:</strong> most states prohibit interstate sale of cottage food. Seller is responsible for verifying the legislation of their state of origin and the destination state.</li>
+    <li><strong>Botanical and herbal products:</strong> some states have specific restrictions on certain ingredients. Seller must verify legality in the destination state.</li>
+  </ul>
+
+  <h2 class="tx-section">8. Force Majeure</h2>
+  <p>Tiangix is not liable for delivery delays or failures caused by force majeure events, including:</p>
+  <ul>
+    <li>Natural disasters (hurricanes, tornadoes, floods, extreme snowstorms)</li>
+    <li>Carrier strikes or work stoppages</li>
+    <li>Government restrictions or border closures</li>
+    <li>Declared pandemics or public health emergencies</li>
+    <li>Major telecommunications infrastructure failures</li>
+  </ul>
+  <p>In force majeure cases, Tiangix will notify affected buyers and sellers through registered communication channels with instructions on handling impacted orders.</p>
+
+  <h2 class="tx-section">9. Shipping Support Contact</h2>
+  <ul>
+    <li>Email: <a href="mailto:shipping@tiangix.com">shipping@tiangix.com</a></li>
+    <li>Hours: Monday–Saturday, 9:00 AM – 6:00 PM Central Time</li>
+    <li>For real-time tracking: check the tracking number on the corresponding carrier's website</li>
+  </ul>
+</div>
+
+</div>
+<footer class="tx-footer">© 2026 Latin Ventures LLC d/b/a Tiangix · All rights reserved · <a href="https://www.tiangix.com">www.tiangix.com</a> · <a href="index.html">← Legal Center</a></footer>
+</div>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('active'));document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.add('active'));document.getElementById('btn-es').classList.toggle('active',l==='es');document.getElementById('btn-en').classList.toggle('active',l==='en');document.documentElement.lang=l;}
+</script>
+</body></html>
